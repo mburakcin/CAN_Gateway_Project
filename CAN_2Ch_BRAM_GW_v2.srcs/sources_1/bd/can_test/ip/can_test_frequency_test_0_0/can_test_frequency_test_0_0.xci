@@ -1,0 +1,48 @@
+{
+  "schema": "xilinx.com:schema:json_instance:1.0",
+  "ip_inst": {
+    "xci_name": "can_test_frequency_test_0_0",
+    "cell_name": "frequency_test_0",
+    "component_reference": "xilinx.com:module_ref:frequency_test:1.0",
+    "ip_revision": "1",
+    "gen_directory": "../../../../../../CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ip/can_test_frequency_test_0_0",
+    "parameters": {
+      "component_parameters": {
+        "Component_Name": [ { "value": "can_test_frequency_test_0_0", "resolve_type": "user", "usage": "all" } ]
+      },
+      "project_parameters": {
+        "ARCHITECTURE": [ { "value": "zynquplus" } ],
+        "BASE_BOARD_PART": [ { "value": "xilinx.com:zcu102:part0:3.4" } ],
+        "BOARD_CONNECTIONS": [ { "value": "" } ],
+        "DEVICE": [ { "value": "xczu9eg" } ],
+        "PACKAGE": [ { "value": "ffvb1156" } ],
+        "PREFHDL": [ { "value": "VHDL" } ],
+        "SILICON_REVISION": [ { "value": "" } ],
+        "SIMULATOR_LANGUAGE": [ { "value": "MIXED" } ],
+        "SPEEDGRADE": [ { "value": "-2" } ],
+        "STATIC_POWER": [ { "value": "" } ],
+        "TEMPERATURE_GRADE": [ { "value": "E" } ],
+        "USE_RDI_CUSTOMIZATION": [ { "value": "TRUE" } ],
+        "USE_RDI_GENERATION": [ { "value": "TRUE" } ]
+      },
+      "runtime_parameters": {
+        "IPCONTEXT": [ { "value": "IP_Integrator" } ],
+        "IPREVISION": [ { "value": "1" } ],
+        "MANAGED": [ { "value": "TRUE" } ],
+        "OUTPUTDIR": [ { "value": "../../../../../../CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ip/can_test_frequency_test_0_0" } ],
+        "SELECTEDSIMMODEL": [ { "value": "" } ],
+        "SHAREDDIR": [ { "value": "../../ipshared" } ],
+        "SWVERSION": [ { "value": "2022.2.2" } ],
+        "SYNTHESISFLOW": [ { "value": "GLOBAL" } ]
+      }
+    },
+    "boundary": {
+      "ports": {
+        "main_freq_in": [ { "direction": "in" } ],
+        "can_clk_in": [ { "direction": "in" } ],
+        "main_freq_test_probe_out": [ { "direction": "out" } ],
+        "can_clk_test_probe_out": [ { "direction": "out" } ]
+      }
+    }
+  }
+}

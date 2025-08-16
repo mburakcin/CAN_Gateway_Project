@@ -1,0 +1,45 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/upkmy/CAN_2Ch_BRAM_GW/CAN_2Ch_BRAM_GW.srcs/sources_1/new/input_register_can.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'input_register_can'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/upkmy/CAN_2Ch_BRAM_GW/CAN_2Ch_BRAM_GW.srcs/sources_1/new/tx_pulse_generator.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tx_pulse_generator'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/upkmy/CAN_2Ch_BRAM_GW/CAN_2Ch_BRAM_GW.srcs/sources_1/new/frequency_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'frequency_test'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/upkmy/CAN_2Ch_BRAM_GW/CAN_2Ch_BRAM_GW.ip_user_files/bd/can_test/ip/can_test_can_0_0/sim/can_test_can_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'can_test_can_0_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/upkmy/CAN_2Ch_BRAM_GW/CAN_2Ch_BRAM_GW.ip_user_files/bd/can_test/ip/can_test_proc_sys_reset_0_0/sim/can_test_proc_sys_reset_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'can_test_proc_sys_reset_0_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/upkmy/CAN_2Ch_BRAM_GW/CAN_2Ch_BRAM_GW.ip_user_files/bd/can_test/ip/can_test_input_register_can_0_0/sim/can_test_input_register_can_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'can_test_input_register_can_0_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/upkmy/CAN_2Ch_BRAM_GW/CAN_2Ch_BRAM_GW.ip_user_files/bd/can_test/ip/can_test_tx_pulse_generator_0_0/sim/can_test_tx_pulse_generator_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'can_test_tx_pulse_generator_0_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/upkmy/CAN_2Ch_BRAM_GW/CAN_2Ch_BRAM_GW.ip_user_files/bd/can_test/ip/can_test_frequency_test_0_0/sim/can_test_frequency_test_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'can_test_frequency_test_0_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/upkmy/CAN_2Ch_BRAM_GW/CAN_2Ch_BRAM_GW.ip_user_files/bd/can_test/ip/can_test_can_1_0/sim/can_test_can_1_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'can_test_can_1_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/upkmy/CAN_2Ch_BRAM_GW/CAN_2Ch_BRAM_GW.ip_user_files/bd/can_test/ip/can_test_axi_bram_ctrl_0_0/sim/can_test_axi_bram_ctrl_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'can_test_axi_bram_ctrl_0_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/upkmy/CAN_2Ch_BRAM_GW/CAN_2Ch_BRAM_GW.ip_user_files/bd/can_test/ip/can_test_input_register_can_1_0/sim/can_test_input_register_can_1_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'can_test_input_register_can_1_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/upkmy/CAN_2Ch_BRAM_GW/CAN_2Ch_BRAM_GW.ip_user_files/bd/can_test/ipshared/c9a2/hdl/Gateway_Logik_v1_0_M00_AXI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Gateway_Logik_v1_0_M00_AXI'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/upkmy/CAN_2Ch_BRAM_GW/CAN_2Ch_BRAM_GW.ip_user_files/bd/can_test/ipshared/c9a2/hdl/Gateway_Logik_v1_0_M01_AXI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Gateway_Logik_v1_0_M01_AXI'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/upkmy/CAN_2Ch_BRAM_GW/CAN_2Ch_BRAM_GW.ip_user_files/bd/can_test/ipshared/c9a2/hdl/Gateway_Logik_v1_0_M02_AXI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Gateway_Logik_v1_0_M02_AXI'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/upkmy/CAN_2Ch_BRAM_GW/CAN_2Ch_BRAM_GW.ip_user_files/bd/can_test/ipshared/c9a2/hdl/Gateway_Logik_v1_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Gateway_Logik_v1_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/upkmy/CAN_2Ch_BRAM_GW/CAN_2Ch_BRAM_GW.ip_user_files/bd/can_test/ip/can_test_Gateway_Logik_0_0/sim/can_test_Gateway_Logik_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'can_test_Gateway_Logik_0_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/upkmy/CAN_2Ch_BRAM_GW/CAN_2Ch_BRAM_GW.ip_user_files/bd/can_test/sim/can_test.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'm00_couplers_imp_KTRHKY'
+INFO: [VRFC 10-3107] analyzing entity 'm01_couplers_imp_19LS9IB'
+INFO: [VRFC 10-3107] analyzing entity 'm02_couplers_imp_LVPAO1'
+INFO: [VRFC 10-3107] analyzing entity 's00_couplers_imp_1DFX8XS'
+INFO: [VRFC 10-3107] analyzing entity 's01_couplers_imp_PWUEE9'
+INFO: [VRFC 10-3107] analyzing entity 's02_couplers_imp_1F0VH8J'
+INFO: [VRFC 10-3107] analyzing entity 'can_test_GW_Controller_0_axi_periph_0'
+INFO: [VRFC 10-3107] analyzing entity 'can_test'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/upkmy/CAN_2Ch_BRAM_GW/CAN_2Ch_BRAM_GW.gen/sources_1/bd/can_test/hdl/can_test_wrapper.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'can_test_wrapper'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/upkmy/CAN_2Ch_BRAM_GW/CAN_2Ch_BRAM_GW.srcs/sim_1/new/tb_top.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_top'

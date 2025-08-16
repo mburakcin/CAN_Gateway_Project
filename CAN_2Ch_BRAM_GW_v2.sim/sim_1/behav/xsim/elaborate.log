@@ -1,0 +1,9 @@
+Vivado Simulator v2022.2.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /tools/xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --debug typical --relax --mt 8 -L xil_defaultlib -L lib_cdc_v1_0_2 -L blk_mem_gen_v8_4_5 -L lib_bmg_v1_0_14 -L can_v5_0_30 -L proc_sys_reset_v5_0_13 -L generic_baseblocks_v2_1_0 -L axi_infrastructure_v1_1_0 -L axi_register_slice_v2_1_27 -L fifo_generator_v13_2_7 -L axi_data_fifo_v2_1_26 -L axi_crossbar_v2_1_28 -L axi_bram_ctrl_v4_1_7 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_top_behav xil_defaultlib.tb_top xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-718] formal port <user_si570_sysclk_p> does not exist in entity <can_test_wrapper>.  Please compare the definition of block <can_test_wrapper> to its component declaration and its instantion to detect the mismatch. [/home/upkmy/CAN_2Ch_BRAM_GW/CAN_2Ch_BRAM_GW.srcs/sim_1/new/tb_top.vhd:45]
+ERROR: [VRFC 10-718] formal port <user_si570_sysclk_n> does not exist in entity <can_test_wrapper>.  Please compare the definition of block <can_test_wrapper> to its component declaration and its instantion to detect the mismatch. [/home/upkmy/CAN_2Ch_BRAM_GW/CAN_2Ch_BRAM_GW.srcs/sim_1/new/tb_top.vhd:46]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.

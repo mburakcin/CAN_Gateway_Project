@@ -1,0 +1,8 @@
+verilog xil_defaultlib --include "../../../../CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7698" \
+"../../../bd/can_test/ip/can_test_clk_wiz_0_2/can_test_clk_wiz_0_2_clk_wiz.v" \
+"../../../bd/can_test/ip/can_test_clk_wiz_0_2/can_test_clk_wiz_0_2.v" \
+"../../../bd/can_test/ip/can_test_axi_bram_ctrl_0_bram_0/sim/can_test_axi_bram_ctrl_0_bram_0.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

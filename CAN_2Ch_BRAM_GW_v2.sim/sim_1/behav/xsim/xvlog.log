@@ -1,0 +1,10 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/upkmy/CAN_2Ch_BRAM_GW/CAN_2Ch_BRAM_GW.ip_user_files/bd/can_test/ip/can_test_xbar_0/sim/can_test_xbar_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module can_test_xbar_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/upkmy/CAN_2Ch_BRAM_GW/CAN_2Ch_BRAM_GW.ip_user_files/bd/can_test/ip/can_test_clk_wiz_0_2/can_test_clk_wiz_0_2_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module can_test_clk_wiz_0_2_clk_wiz
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/upkmy/CAN_2Ch_BRAM_GW/CAN_2Ch_BRAM_GW.ip_user_files/bd/can_test/ip/can_test_clk_wiz_0_2/can_test_clk_wiz_0_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module can_test_clk_wiz_0_2
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/upkmy/CAN_2Ch_BRAM_GW/CAN_2Ch_BRAM_GW.ip_user_files/bd/can_test/ip/can_test_axi_bram_ctrl_0_bram_0/sim/can_test_axi_bram_ctrl_0_bram_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module can_test_axi_bram_ctrl_0_bram_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/upkmy/CAN_2Ch_BRAM_GW/CAN_2Ch_BRAM_GW.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

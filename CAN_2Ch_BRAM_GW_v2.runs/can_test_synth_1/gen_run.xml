@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="can_test_synth_1" LaunchPart="xczu9eg-ffvb1156-2-e" LaunchTime="1755340363">
+  <File Type="VDS-TIMINGSUMMARY" Name="can_test_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="can_test.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="can_test_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="can_test_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="can_test_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="can_test.vds"/>
+  <File Type="REPORTS-TCL" Name="can_test_reports.tcl"/>
+  <File Type="VDS-TIMING-PB" Name="can_test_timing_summary_synth.pb"/>
+  <File Type="PA-TCL" Name="can_test.tcl"/>
+  <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/can_test">
+    <File Path="$PSRCDIR/sources_1/bd/can_test/can_test.bd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CANonPL_2/CANonPL_2.srcs/sources_1/bd/can_test/can_test.bd"/>
+        <Attr Name="ImportTime" Val="1750398243"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="can_test"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/can_test">
+    <File Path="$PSRCDIR/sources_1/bd/can_test/can_test.bd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CANonPL_2/CANonPL_2.srcs/sources_1/bd/can_test/can_test.bd"/>
+        <Attr Name="ImportTime" Val="1750398243"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="can_test"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/can_test_wrapper.dcp">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CANonPL_2/CANonPL_2.srcs/utils_1/imports/synth_1/can_test_wrapper.dcp"/>
+        <Attr Name="ImportTime" Val="1750368139"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>
