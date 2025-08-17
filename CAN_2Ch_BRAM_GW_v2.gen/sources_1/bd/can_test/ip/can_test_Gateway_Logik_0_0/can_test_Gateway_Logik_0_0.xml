@@ -1696,11 +1696,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sun Aug 17 17:16:11 UTC 2025</spirit:value>
+            <spirit:value>Sun Aug 17 22:23:07 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:be896cad</spirit:value>
+            <spirit:value>9:a58c47b2</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1711,7 +1711,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:be896cad</spirit:value>
+            <spirit:value>9:a58c47b2</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1727,11 +1727,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sun Aug 17 17:16:11 UTC 2025</spirit:value>
+            <spirit:value>Sun Aug 17 22:23:07 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:be896cad</spirit:value>
+            <spirit:value>9:a58c47b2</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1747,11 +1747,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sun Aug 17 17:16:11 UTC 2025</spirit:value>
+            <spirit:value>Sun Aug 17 22:23:07 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:427ad1b1</spirit:value>
+            <spirit:value>9:597ffaae</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1767,11 +1767,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Sun Aug 17 17:16:11 UTC 2025</spirit:value>
+            <spirit:value>Sun Aug 17 22:23:07 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:427ad1b1</spirit:value>
+            <spirit:value>9:597ffaae</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -3064,19 +3064,19 @@
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlsynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/ee83/hdl/Gateway_Logik_v1_0_M00_AXI.vhd</spirit:name>
+        <spirit:name>../../ipshared/7f80/hdl/Gateway_Logik_v1_0_M00_AXI.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ee83/hdl/Gateway_Logik_v1_0_M01_AXI.vhd</spirit:name>
+        <spirit:name>../../ipshared/7f80/hdl/Gateway_Logik_v1_0_M01_AXI.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ee83/hdl/Gateway_Logik_v1_0_M02_AXI.vhd</spirit:name>
+        <spirit:name>../../ipshared/7f80/hdl/Gateway_Logik_v1_0_M02_AXI.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ee83/hdl/Gateway_Logik_v1_0.vhd</spirit:name>
+        <spirit:name>../../ipshared/7f80/hdl/Gateway_Logik_v1_0.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -3091,19 +3091,19 @@
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/ee83/hdl/Gateway_Logik_v1_0_M00_AXI.vhd</spirit:name>
+        <spirit:name>../../ipshared/7f80/hdl/Gateway_Logik_v1_0_M00_AXI.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ee83/hdl/Gateway_Logik_v1_0_M01_AXI.vhd</spirit:name>
+        <spirit:name>../../ipshared/7f80/hdl/Gateway_Logik_v1_0_M01_AXI.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ee83/hdl/Gateway_Logik_v1_0_M02_AXI.vhd</spirit:name>
+        <spirit:name>../../ipshared/7f80/hdl/Gateway_Logik_v1_0_M02_AXI.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/ee83/hdl/Gateway_Logik_v1_0.vhd</spirit:name>
+        <spirit:name>../../ipshared/7f80/hdl/Gateway_Logik_v1_0.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -3270,7 +3270,7 @@
   <spirit:vendorExtensions>
     <xilinx:coreExtensions>
       <xilinx:displayName>Gateway_Logik_v1.1</xilinx:displayName>
-      <xilinx:coreRevision>39</xilinx:coreRevision>
+      <xilinx:coreRevision>41</xilinx:coreRevision>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI.ADDR_WIDTH" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M00_AXI.ARUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
@@ -3404,7 +3404,7 @@
       <xilinx:xilinxVersion>2022.2.2</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="ffd5da15"/>
       <xilinx:checksum xilinx:scope="addressSpaces" xilinx:value="33d6e125"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="2cd153f1"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="fc78087a"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="09f3fa5e"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="475ee378"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="5e73ec63"/>

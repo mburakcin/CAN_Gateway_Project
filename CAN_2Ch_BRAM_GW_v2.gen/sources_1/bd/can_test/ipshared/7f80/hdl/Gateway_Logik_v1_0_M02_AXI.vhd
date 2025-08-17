@@ -2,10 +2,9 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity Gateway_Logik_v1_0_M00_AXI is
+entity Gateway_Logik_v1_0_M02_AXI is
 	generic (
 		-- Users to add parameters here
-		c_clkfreq : integer := 100_000_000;
 
 		-- User parameters ends
 		-- Do not modify the parameters beyond this line
@@ -15,7 +14,6 @@ entity Gateway_Logik_v1_0_M00_AXI is
 		-- The master requires a target slave base address.
     -- The master will initiate read and write transactions on the slave with base address specified here as a parameter.
 		C_M_TARGET_SLAVE_BASE_ADDR	: std_logic_vector	:= x"00000000";
-
 		-- Width of M_AXI address bus. 
     -- The master generates the read and write addresses of width specified as C_M_AXI_ADDR_WIDTH.
 		C_M_AXI_ADDR_WIDTH	: integer	:= 32;
@@ -24,40 +22,29 @@ entity Gateway_Logik_v1_0_M00_AXI is
 		C_M_AXI_DATA_WIDTH	: integer	:= 32;
 		-- Transaction number is the number of write 
     -- and read transactions the master will perform as a part of this example memory test.
-		C_M_TRANSACTIONS_NUM	: integer	:= 7
-
+		C_M_TRANSACTIONS_NUM	: integer	:= 6
 	);
 	port (
 		-- Users to add ports here
-            -- LED port
-            main_freq_test_probe : out std_logic;
-            can_freq_test_probe : out std_logic;
-            led_vector_can0 : out std_logic_vector(1 downto 0);
-            --led_vector_core_stat : out std_logic_vector(1 downto 0);
-            can_powerup_stat : out std_logic;
-            can_enabled_stat_led : out std_logic;
-            --can_config_stat_led : out std_logic;
-            frame_received_led : out std_logic;
-            interrupt_enabled_led : out std_logic;
-        CAN0_FRAME_IsReceived_ID : out std_logic_vector(31 downto 0);
-        CAN0_FRAME_IsReceived_DW1 : out std_logic_vector(31 downto 0);
-        CAN0_FRAME_IsReceived_DW2 : out std_logic_vector(31 downto 0);
-        --CAN0_FRAME_ToSend_ID : in std_logic_vector(31 downto 0);
-        --CAN0_FRAME_ToSend_DW1 : in std_logic_vector(31 downto 0);
-        --CAN0_FRAME_ToSend_DW2 : in std_logic_vector(31 downto 0);
-       -- RX_INTERRUPT_FROM_BRAM : in std_logic;
-          --TX_INTERRUPT_FROM_BRAM_CAN0 : in std_logic;
-          TX_INTERRUPT_TO_CAN1 : out std_logic;
-       -- WRITE_INTERRUPT_TO_BRAM : out std_logic;
---            led_three : out std_logic;
-            --led_six : out std_logic;
---            led_seven : out std_logic;
---            led_five: out std_logic;
-            --led_four : out std_logic;
---            led_two : out std_logic;
---            led_zero : out std_logic;
---            led_one : out std_logic;
-            
+        RECEIVE_FROM_CAN0_CANID : in std_logic_vector(28 downto 0);
+        RECEIVE_FROM_CAN0_CANDW1 : in std_logic_vector(31 downto 0);
+        RECEIVE_FROM_CAN0_CANDW2 : in std_logic_vector(31 downto 0);
+        RECEIVE_FROM_CAN1_CANID : in std_logic_vector(28 downto 0);
+        RECEIVE_FROM_CAN1_CANDW1 : in std_logic_vector(31 downto 0);
+        RECEIVE_FROM_CAN1_CANDW2 : in std_logic_vector(31 downto 0);
+        
+        SEND_TO_CAN0_CANID : out std_logic_vector(31 downto 0);
+        SEND_TO_CAN0_CANDW1 : out std_logic_vector(31 downto 0);
+        SEND_TO_CAN0_CANDW2 : out std_logic_vector(31 downto 0);
+        SEND_TO_CAN1_CANID : out std_logic_vector(31 downto 0);
+        SEND_TO_CAN1_CANDW1 : out std_logic_vector(31 downto 0);
+        SEND_TO_CAN1_CANDW2 : out std_logic_vector(31 downto 0);
+        
+        RX_INTERRUPT_FROM_CAN0 : in std_logic;
+        RX_INTERRUPT_FROM_CAN1 : in std_logic;
+        TX_INTERRUPT_TO_CAN0 : out std_logic;
+        TX_INTERRUPT_TO_CAN1 : out std_logic;
+        
 		-- User ports ends
 		-- Do not modify the ports beyond this line
 
@@ -120,18 +107,16 @@ entity Gateway_Logik_v1_0_M00_AXI is
 		-- Read valid. This signal indicates that the channel is signaling the required read data.
 		M_AXI_RVALID	: in std_logic;
 		-- Read ready. This signal indicates that the master can accept the read data and response information.
-		M_AXI_RREADY	: out std_logic		
-		
+		M_AXI_RREADY	: out std_logic
 	);
-end Gateway_Logik_v1_0_M00_AXI;
+end Gateway_Logik_v1_0_M02_AXI;
 
-architecture implementation of Gateway_Logik_v1_0_M00_AXI is
+architecture implementation of Gateway_Logik_v1_0_M02_AXI is
 
 	-- function called clogb2 that returns an integer which has the
 	-- value of the ceiling of the log base 2
 	function clogb2 (bit_depth : integer) return integer is            
 	 	variable depth  : integer := bit_depth;                               
-	 	--variable depth  : integer := bit_depth;                               
 	 	variable count  : integer := 1;                                       
 	 begin                                                                   
 	 	 for clogb2 in 1 to bit_depth loop  -- Works for up to 32 bit integers
@@ -150,73 +135,6 @@ architecture implementation of Gateway_Logik_v1_0_M00_AXI is
 	 end;                                                                    
 
 	-- Example user application signals
-	-- Registers
-	constant SRR : std_logic_vector (31 downto 0) := x"00000000"; -- software reset register
-	constant MSR : std_logic_vector (31 downto 0) := x"00000004"; -- mode select register
-	constant BRPR : std_logic_vector (31 downto 0) := x"00000008"; -- baud rate prescaler register
-	constant BTR : std_logic_vector (31 downto 0) := x"0000000C"; -- bit timing register
-	constant ERR_CTR_REG : std_logic_vector (31 downto 0) := x"00000010"; -- error counter reg
-	constant ERR_STAT_REG : std_logic_vector (31 downto 0) := x"00000014"; -- error counter reg
-	constant IER : std_logic_vector (31 downto 0) := x"00000020"; -- interrupt enable register 
-	constant ISR : std_logic_vector (31 downto 0) := x"0000001C"; -- interrupt status register 
-	constant ICR : std_logic_vector (31 downto 0) := x"00000024"; -- interrupt clear register 
-	constant STATUS_REG: std_logic_vector (31 downto 0) := x"00000018"; -- status register 
-	constant TXFIFO_ID : std_logic_vector (31 downto 0) := x"00000030"; -- txfifo message storage register
-	constant TXFIFO_DLC : std_logic_vector (31 downto 0) := x"00000034"; -- txfifo DLC
-	constant TXFIFO_DW1 : std_logic_vector (31 downto 0) := x"00000038"; -- tx fifo data part 1
-	constant TXFIFO_DW2 : std_logic_vector (31 downto 0) := x"0000003C"; -- tx fifo data part 2
-    constant ADDR_TXHPB_ID  : std_logic_vector(31 downto 0) := x"00000040"; -- TXHPB
-    constant ADDR_TXHPB_DLC : std_logic_vector(31 downto 0) := x"00000044";
-    constant ADDR_TXHPB_DW1 : std_logic_vector(31 downto 0) := x"00000048";
-    constant ADDR_TXHPB_DW2 : std_logic_vector(31 downto 0) := x"0000004C";
-    constant RXFIFO_ID : std_logic_vector (31 downto 0) := x"00000050"; -- rxfifo id 
-	constant RXFIFO_DW1 : std_logic_vector (31 downto 0) := x"00000058"; --rxfifo data part 1
-	constant RXFIFO_DW2 : std_logic_vector (31 downto 0) := x"0000005C"; --rxfifo data part 2
-	constant RXFIFO_DLC : std_logic_vector (31 downto 0) := x"00000054"; --rxfifo dlc
-    
-    -- Other CAN settings
-    constant SRR_CAN_ENABLE : std_logic_vector(31 downto 0) := x"00000002"; -- Software Reset Register CEN (can enabled) = 1, SRST (software reset) = 0 
-    constant MSR_NORMAL_MODE : std_logic_vector(31 downto 0) := x"00000000"; -- Mode Selector Register Bit LBACK = 0, SLEEP = 0
-    constant ENABLE_IER_RXOK : std_logic_vector(31 downto 0) := x"00000010"; -- enable RX_OK interrupt register in bit 4 of address 0x20 to interrupt once a message is received.
-    constant CLR_RXOK :std_logic_vector(31 downto 0) := x"00000010"; --clear RXOK interrupt at address 0x24 (ICR: interrupt clear register)
-    
-    constant BRP_VAL :  std_logic_vector(31 downto 0)  := x"00000002"; -- Baud Rate Prescale Register Bit 24 Mhz / 8 Mhz = 3. normal value is 3 but it is minus one in the register value
-    constant BTR_VAL :  std_logic_vector(31 downto 0) := x"000001BA"; -- -- SJW=1, TS2=4, TS1=11"; the actual value of these parameters are normally one more than written
-    constant IER_VAL :  std_logic_vector(31 downto 0) := x"00000016"; -- -- enabled interrupts = ERXOK (enable new message received interrupt), ETXFLL (enable transmit fifo full interrupt), ETXO (enable transmission successful interrupt)
-    constant ISR_TXOK_VAL :  std_logic_vector(31 downto 0) := x"00000002"; -- -- TXOK bit 1 --> 1 indicatess that a message transmitted successfully
-    constant CAN_ID       : std_logic_vector(31 downto 0) := x"C7FF0022";
-    constant CAN_DLC      : std_logic_vector(31 downto 0) := x"80000000";
-    constant CAN_DATA1    : std_logic_vector(31 downto 0) := x"11223344";
-    constant CAN_DATA2    : std_logic_vector(31 downto 0) := x"55667788";
-    
-    -- Frame send control
-    signal can_timer         : integer range 0 to c_clkfreq := 0;
-    signal timer_counter : integer range 0 to c_clkfreq;
-    signal can_send_flag     : std_logic := '0';
-    signal can_send_state    : integer range 0 to 10 := 0;
-    signal can_msg_pending   : std_logic := '0';
-    signal tx_ok_var : std_logic_vector(31 downto 0)  := x"00000000";
-    signal status_reg_val : std_logic_vector(31 downto 0)  := x"00000000";
-    signal power_up_stat_awaddr : std_logic := '1';
-    signal power_up_stat_wdata : std_logic := '1';
-    signal status_reg_val2 : std_logic_vector(31 downto 0)  := x"00000000";
-    signal status_reg_modeval : std_logic_vector(3 downto 0) := x"F";
-    signal first_run : integer := 1;
-    signal write_entered : std_logic := '0';
-    signal idle_entered : std_logic := '0';
-    signal rxok_interrupt_stat : std_logic := '0'; -- shows if there is an active interrupt
-    signal interrupt_enabled_stat : std_logic := '0'; -- shows if interrupts enabled
-    signal clean_icr : std_logic := '0';
-    signal clean_icr_activated : std_logic := '0';
--- signal can_rx_id : std_logic_vector(31 downto 0)  := x"00000000";
--- signal can_rx_dw1 : std_logic_vector(31 downto 0)  := x"00000000";
--- signal can_rx_dw2 : std_logic_vector(31 downto 0)  := x"00000000";
--- signal sg_CAN_ID_ToSend : std_logic_vector(31 downto 0)  := x"80000000";  
--- signal sg_CAN_DW1_ToSend : std_logic_vector(31 downto 0)  := x"00000000"; 
--- signal sg_CAN_DW2_ToSend : std_logic_vector(31 downto 0)  := x"00000000"; 
--- LED cpntrol
-    --signal led_vector : std_logic_vector(3 downto 0);
-    
 
 	-- TRANS_NUM_BITS is the width of the index counter for
 	-- number of write or read transaction..
@@ -237,7 +155,7 @@ architecture implementation of Gateway_Logik_v1_0_M00_AXI is
 	 				INIT_COMPARE);-- This state issues the status of comparison 
 	 							-- of the written data with the read data
 
-	signal mst_exec_state  : state ; 
+	 signal mst_exec_state  : state ; 
 
 	-- AXI4LITE signals
 	--write address valid
@@ -261,7 +179,7 @@ architecture implementation of Gateway_Logik_v1_0_M00_AXI is
 	--Asserts when there is a read response error
 	signal read_resp_error	: std_logic;
 	--A pulse to initiate a write transaction
-	signal start_single_write	: std_logic := '0';
+	signal start_single_write	: std_logic;
 	--A pulse to initiate a read transaction
 	signal start_single_read	: std_logic;
 	--Asserts when a single beat write transaction is issued and remains asserted till the completion of write trasaction.
@@ -288,25 +206,19 @@ architecture implementation of Gateway_Logik_v1_0_M00_AXI is
 	signal last_write	: std_logic;
 	--Flag is asserted when the read index reaches the last read transction number
 	signal last_read	: std_logic;
-
-	
-	signal init_txn_ff	: std_logic := '0';
-	signal init_txn_ff2	: std_logic := '0';
+	signal init_txn_ff	: std_logic;
+	signal init_txn_ff2	: std_logic;
 	signal init_txn_edge	: std_logic;
-	signal init_txn_pulse	: std_logic := '0' ;
-	signal can_enabled_status : std_logic := '0';
-	signal can_config_status : std_logic := '0';
-    
+	signal init_txn_pulse	: std_logic;
+	
+	signal memory_address : std_logic_vector (31 downto 0) := x"00000000"; -- added by M. Burak Cin
+	signal target_network : std_logic_vector (1 downto 0):= "11";
+	--signal target_and_frameid : std_logic_vector (31 downto 0) := x"FFFFFFFF";
+
 
 begin
 	-- I/O Connections assignments
- --  sg_CAN_ID_ToSend <= CAN_FRAME_ToSend_ID;
- --  sg_CAN_DW1_ToSend <= CAN_FRAME_ToSend_DW1;
- --  sg_CAN_DW2_ToSend <= CAN_FRAME_ToSend_DW2;
- -- 
- --  CAN_FRAME_IsReceived_ID <= can_rx_id ;
- --  CAN_FRAME_IsReceived_DW1 <=can_rx_dw1 ;
- --  CAN_FRAME_IsReceived_DW2 <=can_rx_dw2 ;
+
 	--Adding the offset address to the base addr of the slave
 	M_AXI_AWADDR	<= std_logic_vector (unsigned(C_M_TARGET_SLAVE_BASE_ADDR) + unsigned(axi_awaddr));
 	--AXI 4 write data
@@ -327,15 +239,8 @@ begin
 	M_AXI_RREADY	<= axi_rready;
 	--Example design I/O
 	TXN_DONE	<= compare_done;
-	
-	
-
-	
-	
 	init_txn_pulse	<= ( not init_txn_ff2)  and  init_txn_ff;
-    can_powerup_stat <= (not can_enabled_status);
-    can_enabled_stat_led <= can_enabled_status;
-    --can_config_stat_led <= idle_entered;
+
 
 	--Generate a pulse to initiate AXI transaction.
 	process(M_AXI_ACLK)                                                          
@@ -394,8 +299,7 @@ begin
 	        end if;                                                                     
 	      end if;                                                                       
 	    end if;                                                                         
-	  end process;       
-	                                                                 
+	  end process;                                                                      
 	                                                                                    
 	  -- start_single_write triggers a new write                                        
 	  -- transaction. write_index is a counter to                                       
@@ -567,102 +471,35 @@ begin
 	      begin                                                                            
 	    	if (rising_edge (M_AXI_ACLK)) then                                              
 	    	  if (M_AXI_ARESETN = '0' or init_txn_pulse = '1') then                                                
-	    	    axi_awaddr <=  x"00000028";                                              
+	    	    axi_awaddr <= (others => '0');                                              
 	    	  elsif (M_AXI_AWREADY = '1' and axi_awvalid = '1') then                        
-	    	    -- Signals a new write address/ write data is                                                  --constant SRR : std_logic_vector (31
-	    	    -- available by user logic                                                                     --constant MSR : std_logic_vector (31
-	    	    --axi_awaddr <= std_logic_vector (unsigned(axi_awaddr) + 4);
-	    	                                       --constant BRPR : std_logic_vector (3
-			    if can_enabled_status = '0' then    
-			        led_vector_can0 <= "01";	                                                                                                   --constant BTR : std_logic_vector (31	    	    		                                                                                       --constant SR : std_logic_vector (31 
-                    if unsigned(write_index) = 1 then                                                               --constant STATUS_REG: std_logic_vect
-                        axi_awaddr <= BRPR;                                                              --constant TXFIFO_ID : std_logic_vect
+	    	    -- Signals a new write address/ write data is                               
+	    	    -- available by user logic                                                  
+	    	      
+	    	     if unsigned(write_index) = 1 then                                                               --constant STATUS_REG: std_logic_vect
+                        axi_awaddr <= std_logic_vector (unsigned(memory_address) + 1);                                                              --constant TXFIFO_ID : std_logic_vect
                     elsif unsigned(write_index) = 2 then                                                               --constant TXFIFO_DLC : std_logic_vec
-                        axi_awaddr <= BTR;                                                                      --constant TXFIFO_DW1 : std_logic_vec
+                        axi_awaddr <= std_logic_vector (unsigned(memory_address) + 1);                                                                      --constant TXFIFO_DW1 : std_logic_vec
                     elsif unsigned(write_index) = 3 then                                                               --constant TXFIFO_DW2 : std_logic_vec
-                        axi_awaddr <= MSR;
-                    elsif unsigned(write_index) = 4 then                                                               --constant TXFIFO_DW2 : std_logic_vec
-                        axi_awaddr <= SRR; -- prepare enabling the interrupt  
-                    elsif unsigned(write_index) = 5 then                                                               --constant TXFIFO_DW2 : std_logic_vec
-                        axi_awaddr <= IER;  
-
+                        axi_awaddr <= std_logic_vector (unsigned(memory_address) + 1);
                     else
-                        axi_awaddr <= x"00000028";
-                        first_run <= 0;
-                    end if; 
---                 elsif can_enabled_status = '1' and interrupt_enabled_stat = '1' and rxok_interrupt_stat = '1' then    -- if can and interrupts are enabled prepare to clear interrupt	                                                                                                   --constant BTR : std_logic_vector (31	    	    		                                                                                       --constant SR : std_logic_vector (31 
---                    if unsigned(write_index) = 1 then                                                               --constant STATUS_REG: std_logic_vect
---                        axi_awaddr <= ICR;                                                              --constant TXFIFO_ID : std_logic_vect
---                    else
---                        axi_awaddr <= x"00000028";
-                        
---                    end if; 
-                else 
-                    --if unsigned(write_index) = 5 then                                                               --constant TXFIFO_DW2 : std_logic_vec
-                    axi_awaddr <= ICR;  
-                    --end if;
-                    led_vector_can0 <= "10";	
---                    if unsigned(write_index) = 1 then                                                               --constant TXFIFO_DW2 : std_logic_vec
---                        axi_awaddr <= TXFIFO_ID;    
---                    elsif unsigned(write_index) = 2 then                                                               --constant TXFIFO_DW2 : std_logic_vec
---                        axi_awaddr <= TXFIFO_DLC; 
---                    elsif unsigned(write_index) = 3 then                                                               --constant TXFIFO_DW2 : std_logic_vec
---                        axi_awaddr <= TXFIFO_DW1; 
---                    elsif unsigned(write_index) = 4 then                                                               --constant TXFIFO_DW2 : std_logic_vec
---                        axi_awaddr <= TXFIFO_DW2;     
---                    elsif unsigned(write_index) = 5 then                                                               --constant TXFIFO_DW2 : std_logic_vec
---                        axi_awaddr <= ICR;      -- prepare clear the interrupt                                                                                               --   constant ADDR_TXHPB_ID  : std_lo                                                                 --   constant ADDR_TXHPB_DW1 : std_lo
---                    else                                                                                           --   constant ADDR_TXHPB_DW2 : std_lo
-                        --axi_awaddr <= x"00000028";                                                                  --   constant ADDR_TXHPB_DW2 : std_lo
---                    end if;                                                                                        --   constant ADDR_TXHPB_DW2 : std_lo
-	    	    end if;                                                                                          --   constant ADDR_TXHPB_DW2 : std_lo
-	    	end if; 
-	    	end if; 
-	      end process;                                                                                         --   constant ADDR_TXHPB_DW2 : std_lo
-	                                                                                                           --   constant ADDR_TXHPB_DW2 : std_lo
-	-- Read Addresses                                                                                          --   constant ADDR_TXHPB_DW2 : std_lo
-	    process(M_AXI_ACLK)                                                                                    --   constant ADDR_TXHPB_DW2 : std_lo
-	   	  begin                                                                                                --   constant ADDR_TXHPB_DW2 : std_lo
-	   	    if (rising_edge (M_AXI_ACLK)) then                                                                 --   constant ADDR_TXHPB_DW2 : std_lo
-	   	      if (M_AXI_ARESETN = '0' or init_txn_pulse = '1' ) then                                           --   constant ADDR_TXHPB_DW2 : std_lo
-	   	        axi_araddr <= (others => '0');                                                                 --   constant ADDR_TXHPB_DW2 : std_lo
-	   	      elsif (M_AXI_ARREADY = '1' and axi_arvalid = '1') then                                           --   constant ADDR_TXHPB_DW2 : std_lo
-	   	        -- Signals a new write address/ write data is                                                  --   constant ADDR_TXHPB_DW2 : std_lo
-	   	        -- available by user logic                                                                     --   constant ADDR_TXHPB_DW2 : std_lo
-	   	        -- axi_araddr <= std_logic_vector (unsigned(axi_araddr) + 4);
-	   	           -- automatically the first read will be done for 0x00 which is the SRR
-	   	          if can_enabled_status = '0' then 
-	   	           if unsigned(read_index) = 1 then                                                               --constant STATUS_REG: std_logic_vect
-                        axi_araddr <= STATUS_REG;  		        		    
-                    elsif unsigned(read_index) = 2 then                                                               --constant STATUS_REG: std_logic_vect
-                        axi_araddr <= ERR_CTR_REG;                                                              --constant TXFIFO_ID : std_logic_vect
-                    elsif unsigned(read_index) = 3 then                                                               --constant TXFIFO_DLC : std_logic_vec
-                        axi_araddr <= MSR;                                                                      --constant TXFIFO_DW1 : std_logic_vec
-                    elsif unsigned(read_index) = 4 then                             --SRR_CAN_ENABLE      --constant TXFIFO_DW2 : std_logic_vec
-                        axi_araddr <= IER;  
-                    elsif unsigned(read_index) = 5 then                             --SRR_CAN_ENABLE      --constant TXFIFO_DW2 : std_logic_vec
-                        axi_araddr <= ISR; 
-                    else
-                        axi_araddr <= ERR_CTR_REG;
-                    end if;
-                                  
-                  else 
-                    if unsigned(read_index) = 1 then                                                               --constant STATUS_REG: std_logic_vect
-                        axi_araddr <= STATUS_REG;  		        		                     
-                    elsif unsigned(read_index) = 2 then                                                              --constant STATUS_REG: std_logic_vect
-                        axi_araddr <= RXFIFO_ID;                                                              --constant TXFIFO_ID : std_logic_vect
-                    --elsif unsigned(read_index) = 3 then                                                                            --constant TXFIFO_DLC : std_logic_vec
-                       --axi_araddr <= RXFIFO_DLC;   
-                    elsif unsigned(read_index) = 3 then                                                                            --constant TXFIFO_DLC : std_logic_vec
-                       axi_araddr <= RXFIFO_DW1;                                                                    --constant TXFIFO_DW1 : std_logic_vec
-                    elsif unsigned(read_index) = 4 then                             --SRR_CAN_ENABLE      --constant TXFIFO_DW2 : std_logic_vec
-                        axi_araddr <= RXFIFO_DW2; 
-                    elsif unsigned(read_index) = 5 then
-                        axi_araddr <= ISR; 
-                    else
-                        axi_araddr <= ERR_CTR_REG;
-                    end if;
-                   end if;                                     --   constant ADDR_TXHPB_DW2 : std_lo
+                        axi_awaddr <= x"FF000028";
+                 end if;    
+                  --axi_awaddr <= std_logic_vector (unsigned(axi_awaddr) + 4);                                
+	    	  end if;                                                                       
+	    	end if;                                                                         
+	      end process;                                                                     
+	                                                                                       
+	-- Read Addresses                                                                      
+	    process(M_AXI_ACLK)                                                                
+	   	  begin                                                                         
+	   	    if (rising_edge (M_AXI_ACLK)) then                                          
+	   	      if (M_AXI_ARESETN = '0' or init_txn_pulse = '1' ) then                                            
+	   	        axi_araddr <= (others => '0');                                          
+	   	      elsif (M_AXI_ARREADY = '1' and axi_arvalid = '1') then                    
+	   	        -- Signals a new write address/ write data is                           
+	   	        -- available by user logic                                              
+	   	        axi_araddr <= std_logic_vector (unsigned(axi_araddr) + 4);                                 
 	   	      end if;                                                                   
 	   	    end if;                                                                     
 	   	  end process;                                                                  
@@ -671,52 +508,29 @@ begin
 	    process(M_AXI_ACLK)                                                                
 		  begin                                                                             
 		    if (rising_edge (M_AXI_ACLK)) then                                              
-		      if (M_AXI_ARESETN = '0' or init_txn_pulse = '1') then                                                
+		      if (M_AXI_ARESETN = '0' or init_txn_pulse = '1') then                                                      
 		        axi_wdata <= C_M_START_DATA_VALUE;    	                                    
 		      elsif (M_AXI_WREADY = '1' and axi_wvalid = '1') then                          
 		        -- Signals a new write address/ write data is                               
-		        -- available by user logic                                                  
-		        -- axi_wdata <= std_logic_vector (unsigned(C_M_START_DATA_VALUE) + unsigned(write_index)); 
-		        if can_enabled_status = '0' then		        
-                    if unsigned(write_index) = 1 then                                                               --constant STATUS_REG: std_logic_vect
-                        axi_wdata <= BRP_VAL;  		        		    
-                    elsif unsigned(write_index) = 2 then                                                               --constant STATUS_REG: std_logic_vect
-                        axi_wdata <= BTR_VAL;                                                              --constant TXFIFO_ID : std_logic_vect
-                    elsif unsigned(write_index) = 3 then                                                               --constant TXFIFO_DLC : std_logic_vec
-                        axi_wdata <= MSR_NORMAL_MODE;                                                                      --constant TXFIFO_DW1 : std_logic_vec
-                    elsif unsigned(write_index) = 4 then                             --SRR_CAN_ENABLE      --constant TXFIFO_DW2 : std_logic_vec
-                        axi_wdata <= SRR_CAN_ENABLE;  
-                    elsif unsigned(write_index) = 5 then                             --SRR_CAN_ENABLE      --constant TXFIFO_DW2 : std_logic_vec
-                        axi_wdata <= ENABLE_IER_RXOK;
-                     
+		        -- available by user logic   
+		        if RX_INTERRUPT_FROM_CAN0 = '1' then
+		            target_network <= "01";
+		        	if unsigned(write_index) = 1 then                                                               --constant STATUS_REG: std_logic_vect
+                        axi_wdata <= target_network & '0' & RECEIVE_FROM_CAN0_CANID; -- target network and the frame id                                                              --constant TXFIFO_ID : std_logic_vect
+                    elsif unsigned(write_index) = 2 then                                                               --constant TXFIFO_DLC : std_logic_vec
+                        axi_wdata <= RECEIVE_FROM_CAN0_CANDW1;                                                                      --constant TXFIFO_DW1 : std_logic_vec
+                    elsif unsigned(write_index) = 3 then                                                               --constant TXFIFO_DW2 : std_logic_vec
+                        axi_wdata <= RECEIVE_FROM_CAN0_CANDW2;
                     else
-                        axi_wdata <= x"10101010";
-                     
-                    end if;
-
-                else -- power up = 0                                                     --MSR_NORMAL_MODE
-                    if unsigned(write_index) = 1 then                             --BRP_VAL :  std_     --constant TXFIFO_DW2 : std_logic_vec
-                        axi_wdata <= CAN_ID;                                        --BTR_VAL :  std_
-                    elsif unsigned(write_index) = 2 then                             --IER_VAL :  std_     --constant TXFIFO_DW2 : std_logic_vec
-                        axi_wdata <= CAN_DLC;                                  --ISR_TXOK_VAL : 
-                    elsif unsigned(write_index) = 3 then                             --CAN_ID       :      --constant TXFIFO_DW2 : std_logic_vec
-                        axi_wdata <= CAN_DATA1;                                 --CAN_DLC      : 
-                    elsif unsigned(write_index) = 4 then                             --CAN_ID       :      --constant TXFIFO_DW2 : std_logic_vec
-                        axi_wdata <= CAN_DATA2;  
-                    elsif unsigned(write_index) = 5 then  
-                        if clean_icr = '1' then       -- clean rx_ok interrupt                     --SRR_CAN_ENABLE      --constant TXFIFO_DW2 : std_logic_vec
-                           axi_wdata <= x"11111111"; 
-                           
-                        else 
-                           axi_wdata <= x"00000000";    
-                        end if;                            --CAN_DATA2    :                                --CAN_DATA2    :           --   constant ADDR_TXHPB_ID  : std_lo                                                                 --   constant ADDR_TXHPB_DW1 : std_lo
-                    else                                                         --CAN_DATA2    :      --   constant ADDR_TXHPB_DW2 : std_lo
-                        axi_wdata <= x"10101010";                                --CAN_DATA2    :      --   constant ADDR_TXHPB_DW2 : std_lo
-                    end if;                                                      --CAN_DATA2    : 
-		                                                                     --CAN_DATA2    : 
-		      end if;  		                                                     --CAN_DATA2    : 
-		      end if;                                                        --CAN_DATA2    : 
-		    end if;                                                          --CAN_DATA2    : 
+                        axi_wdata <= x"FF000028";
+                        
+                     TX_INTERRUPT_TO_CAN1 <= '1';
+                     TX_INTERRUPT_TO_CAN0 <= '1';   
+                 end if;  
+               end if;                                              
+		        --axi_wdata <= std_logic_vector (unsigned(C_M_START_DATA_VALUE) + unsigned(write_index));    
+		      end if;                                                                       
+		    end if;                                                                         
 		  end process;                                                                      
 		                                                                                    
 		                                                                                    
@@ -725,50 +539,13 @@ begin
 	    begin                                                                              
 	      if (rising_edge (M_AXI_ACLK)) then                                               
 	        if (M_AXI_ARESETN = '0' or init_txn_pulse = '1' ) then                                                 
-	          expected_rdata <= C_M_START_DATA_VALUE;
-	            	                                
+	          expected_rdata <= C_M_START_DATA_VALUE;    	                                
 	        elsif (M_AXI_RVALID = '1' and axi_rready = '1') then                           
 	          -- Signals a new write address/ write data is                                
 	          -- available by user logic                                                   
 	          expected_rdata <= std_logic_vector (unsigned(C_M_START_DATA_VALUE) + unsigned(read_index)); 
-	          if unsigned(read_index)=2 and M_AXI_RVALID = '1' then
-	               status_reg_modeval <= M_AXI_RDATA(3 downto 0);
-	               can_enabled_status <= M_AXI_RDATA(3);
-	               can_config_status <= M_AXI_RDATA(0);
-	               if status_reg_modeval(0) = '0' then 
-	                   power_up_stat_awaddr <= '0';
-	                   power_up_stat_wdata <= '0';
-	               end if;
-	          elsif (unsigned(read_index)=3 and M_AXI_RVALID = '1'and can_enabled_status = '1') then
-	                       CAN0_FRAME_IsReceived_ID <= M_AXI_RDATA;
-	          elsif (unsigned(read_index)=4 and M_AXI_RVALID = '1'and can_enabled_status = '1') then
-	                       CAN0_FRAME_IsReceived_DW1 <= M_AXI_RDATA;
-	          elsif (unsigned(read_index)=5 and M_AXI_RVALID = '1' and can_enabled_status = '1') then
-	                       CAN0_FRAME_IsReceived_DW2 <= M_AXI_RDATA;    
-	          elsif (unsigned(read_index)=6 and M_AXI_RVALID = '1' and can_enabled_status = '1') then
-	               frame_received_led <= M_AXI_RDATA(4);
-	               if M_AXI_RDATA(4) = '1' then	                   	                   
-	                   TX_INTERRUPT_TO_CAN1 <= '1';
-	                   if clean_icr = '1' then
-	                       clean_icr <= '0';
-	                   else 
-	                       clean_icr <= '1';
-                       end if;
-	                       
-	                   frame_received_led <= M_AXI_RDATA(4);
-	               else 
-	                   if clean_icr = '1' then
-	                       clean_icr <= '0';
-	                   end if; 
-	                      	                      
-	                   TX_INTERRUPT_TO_CAN1 <= '0';
-	                end if;
-	                       
-	          --elsif (unsigned(read_index)=6 and M_AXI_RVALID = '1' and can_enabled_status = '1') then
-	               --interrupt_enabled_led <= M_AXI_RDATA(4);	    	               	               
-	          end if;
-	          end if;
-	        end if;                                                                                                                                                 
+	        end if;                                                                        
+	      end if;                                                                          
 	    end process;                                                                       
 	  --implement master command interface state machine                                           
 	  MASTER_EXECUTION_PROC:process(M_AXI_ACLK)                                                         
@@ -783,34 +560,18 @@ begin
 	        start_single_read  <= '0';                                                                  
 	        read_issued  <= '0';                                                                        
 	        compare_done   <= '0';                                                                      
-	        ERROR <= '0';
-	        
-	        -- debug led
---	        led_vector(0) <= '0';
---	        led_vector(1) <= '0';	        
---	        led_vector(2) <= '1';
---	        led_vector(3) <= '1';
---            led_vector <= x"C";
-	        
+	        ERROR <= '0'; 
 	      else                                                                                          
-	        
-	        case (mst_exec_state) is
-	                                                                                                 
+	        -- state transition                                                                         
+	        case (mst_exec_state) is                                                                    
+	                                                                                                    
 	          when IDLE =>                                                                      
 	            -- This state is responsible to initiate
 	            -- AXI transaction when init_txn_pulse is asserted 
-	            --led_six <= '1';
-	            --idle_entered <= '1';
-	            --led_vector(0) <= '1';
---	              led_vector(0) <= '1';
---	              led_vector(1) <= '0';
---	              led_vector(2) <= '0';
---	              led_vector(3) <= '0';
---                  led_vector <= x"1";
 	            if ( init_txn_pulse = '1') then    
 	              mst_exec_state  <= INIT_WRITE;                                                        
 	              ERROR <= '0';
-	              compare_done <= '0';	              
+	              compare_done <= '0';
 	            else                                                                                    
 	              mst_exec_state  <= IDLE;                                                      
 	            end if;                                                                                 
@@ -819,15 +580,7 @@ begin
 	            -- This state is responsible to issue start_single_write pulse to                       
 	            -- initiate a write transaction. Write transactions will be                             
 	            -- issued until last_write signal is asserted.                                          
-	            -- write controller 
-	            --led_four <= '1';   
-	            --write_entered <= '1';                                                                 
-	            --led_vector(1) <= '1';
---	              led_vector(0) <= '0';
---	              led_vector(1) <= '1';
---	              led_vector(2) <= '0';
---	              led_vector(3) <= '0';
---                led_vector <= x"2";
+	            -- write controller                                                                     
 	            if (writes_done = '1') then                                                             
 	              mst_exec_state <= INIT_READ;                                                          
 	            else                                                                                    
@@ -848,14 +601,8 @@ begin
 	            -- This state is responsible to issue start_single_read pulse to                        
 	            -- initiate a read transaction. Read transactions will be                               
 	            -- issued until last_read signal is asserted.                                           
-	            -- read controller     
-	            --led_vector(2) <= '1';
---	              led_vector(0) <= '0';
---	              led_vector(1) <= '0';
---	              led_vector(2) <= '1';
---	              led_vector(3) <= '0';    
---                led_vector <= x"4";                                                        
-	            if (reads_done = '1' and status_reg_modeval(3) = '1') then                                                              
+	            -- read controller                                                                      
+	            if (reads_done = '1') then                                                              
 	              mst_exec_state <= INIT_COMPARE;                                                       
 	            else                                                                                    
 	              mst_exec_state  <= INIT_READ;                                                         
@@ -874,18 +621,13 @@ begin
 	          when INIT_COMPARE =>                                                                      
 	            -- This state is responsible to issue the state of comparison                           
 	            -- of written data with the read data. If no error flags are set,                       
-	            -- compare_done signal will be asseted to indicate success. 
---	              led_vector(0) <= '0';
---	              led_vector(1) <= '0';
---	              led_vector(2) <= '1';
---	              led_vector(3) <= '0';    
---                led_vector <= x"8";                    
+	            -- compare_done signal will be asseted to indicate success.                             
 	            ERROR <= error_reg;                                                               
 	            mst_exec_state <= IDLE;                                                       
 	            compare_done <= '1';                                                                  
 	                                                                                                    
 	          when others  =>                                                                           
-	              mst_exec_state  <= IDLE;
+	              mst_exec_state  <= IDLE;                                                      
 	        end case  ;                                                                                 
 	      end if;                                                                                       
 	    end if;                                                                                         
@@ -1004,53 +746,8 @@ begin
 	      end if;                                                                                       
 	    end if;                                                                                         
 	  end process;                                                                                      
-    --- %%%%%%%%%%%%%%%%%%%% USER LOGIC %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	-- Add user logic here
-	-- 1-second timer at 125 MHz clock 
-	---- %%%%%%%%%%%%%%%%%%%%% TIMER %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    
---    process (M_AXI_ACLK)
---    begin if rising_edge(M_AXI_ACLK) then
---        can_send_flag <= '1';
---        can_timer <= can_timer + 1;
---        if can_timer < c_clkfreq/4 then
---            led_vector <= "1111";  -- ilk 0.25 saniye else
---        elsif can_timer = c_clkfreq-1 then
---            can_timer <= 0;
---        else
---            led_vector <= "0001";  -- sonra kapalı
---        end if;
-        
---    end if;
---    end process;
-    ---- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    ---- %%%%%%%%%%%%%%%%%%%% CAN_SEND_LOGIC %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    process(M_AXI_ACLK)
-        begin
-          if rising_edge(M_AXI_ACLK) then
-            if M_AXI_ARESETN = '0' then
-              can_send_state <= 0;                                                                          --SRR_CAN_ENABLE :
-              can_msg_pending <= '0';                                                                       --MSR_NORMAL_MODE 
-            else                                                                                            --BRP_VAL :  std_l
-                                                                                                            --BTR_VAL :  std_l
-              case can_send_state is                                                                        --IER_VAL :  std_l
-                when 0 => -- WRITE DATA STATE                                                               --ISR_TXOK_VAL :  
-                    if write_index = "01000" and axi_awvalid ='1' then
-                        can_send_state <= 1;
-                    end if;
-                    
-               when 1 =>
-                    if  M_AXI_RVALID = '1' then
-                    status_reg_val <= M_AXI_RDATA;                    
-                    end if;
-              when others =>
-                    can_send_state <= 0;                                                                                                                                                      --CAN_DATA1    : s
 
-              end case;
-            end if;
-          end if;
-       end process;
-    ---- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	-- Add user logic here
 
 	-- User logic ends
 

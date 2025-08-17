@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: user.org:user:Gateway_Logik:1.1
--- IP Revision: 39
+-- IP Revision: 41
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;

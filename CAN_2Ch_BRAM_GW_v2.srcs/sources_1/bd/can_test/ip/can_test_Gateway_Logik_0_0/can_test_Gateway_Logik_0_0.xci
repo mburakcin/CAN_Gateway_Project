@@ -4,7 +4,7 @@
     "xci_name": "can_test_Gateway_Logik_0_0",
     "cell_name": "Gateway_Logik_0",
     "component_reference": "user.org:user:Gateway_Logik:1.1",
-    "ip_revision": "39",
+    "ip_revision": "41",
     "gen_directory": "../../../../../../CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ip/can_test_Gateway_Logik_0_0",
     "parameters": {
       "component_parameters": {
@@ -59,7 +59,7 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "39" } ],
+        "IPREVISION": [ { "value": "41" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../../../CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ip/can_test_Gateway_Logik_0_0" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
