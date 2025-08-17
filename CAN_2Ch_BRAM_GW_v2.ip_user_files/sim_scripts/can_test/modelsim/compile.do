@@ -68,10 +68,10 @@ vlog -work xil_defaultlib -64 -incr -mfcu  "+incdir+../../../../CAN_2Ch_BRAM_GW_
 
 vcom -work xil_defaultlib -64 -93  \
 "../../../bd/can_test/ip/can_test_input_register_can_1_0/sim/can_test_input_register_can_1_0.vhd" \
-"../../../bd/can_test/ipshared/b7f1/hdl/Gateway_Logik_v1_0_M00_AXI.vhd" \
-"../../../bd/can_test/ipshared/b7f1/hdl/Gateway_Logik_v1_0_M01_AXI.vhd" \
-"../../../bd/can_test/ipshared/b7f1/hdl/Gateway_Logik_v1_0_M02_AXI.vhd" \
-"../../../bd/can_test/ipshared/b7f1/hdl/Gateway_Logik_v1_0.vhd" \
+"../../../bd/can_test/ipshared/adbe/hdl/Gateway_Logik_v1_0_M00_AXI.vhd" \
+"../../../bd/can_test/ipshared/adbe/hdl/Gateway_Logik_v1_0_M01_AXI.vhd" \
+"../../../bd/can_test/ipshared/adbe/hdl/Gateway_Logik_v1_0_M02_AXI.vhd" \
+"../../../bd/can_test/ipshared/adbe/hdl/Gateway_Logik_v1_0.vhd" \
 "../../../bd/can_test/ip/can_test_Gateway_Logik_0_0/sim/can_test_Gateway_Logik_0_0.vhd" \
 "../../../bd/can_test/sim/can_test.vhd" \
 
