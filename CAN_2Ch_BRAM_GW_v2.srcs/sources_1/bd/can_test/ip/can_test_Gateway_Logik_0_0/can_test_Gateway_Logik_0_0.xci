@@ -4,7 +4,7 @@
     "xci_name": "can_test_Gateway_Logik_0_0",
     "cell_name": "Gateway_Logik_0",
     "component_reference": "user.org:user:Gateway_Logik:1.1",
-    "ip_revision": "20",
+    "ip_revision": "39",
     "gen_directory": "../../../../../../CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ip/can_test_Gateway_Logik_0_0",
     "parameters": {
       "component_parameters": {
@@ -17,7 +17,7 @@
         "C_M01_AXI_TARGET_SLAVE_BASE_ADDR": [ { "value": "0x00000000", "value_src": "user", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
         "C_M01_AXI_ADDR_WIDTH": [ { "value": "32", "resolve_type": "user", "format": "long", "enabled": false, "usage": "all" } ],
         "C_M01_AXI_DATA_WIDTH": [ { "value": "32", "resolve_type": "user", "format": "long", "enabled": false, "usage": "all" } ],
-        "C_M01_AXI_TRANSACTIONS_NUM": [ { "value": "5", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
+        "C_M01_AXI_TRANSACTIONS_NUM": [ { "value": "6", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
         "C_M00_AXI_START_DATA_VALUE": [ { "value": "0x00000000", "value_src": "user", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
         "C_M00_AXI_TARGET_SLAVE_BASE_ADDR": [ { "value": "0x00000000", "value_src": "user", "resolve_type": "user", "format": "bitString", "usage": "all" } ],
         "C_M00_AXI_ADDR_WIDTH": [ { "value": "32", "resolve_type": "user", "format": "long", "enabled": false, "usage": "all" } ],
@@ -35,7 +35,7 @@
         "C_M01_AXI_TARGET_SLAVE_BASE_ADDR": [ { "value": "0x00000000", "resolve_type": "generated", "format": "bitString", "usage": "all" } ],
         "C_M01_AXI_ADDR_WIDTH": [ { "value": "32", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_M01_AXI_DATA_WIDTH": [ { "value": "32", "resolve_type": "generated", "format": "long", "usage": "all" } ],
-        "C_M01_AXI_TRANSACTIONS_NUM": [ { "value": "5", "resolve_type": "generated", "format": "long", "usage": "all" } ],
+        "C_M01_AXI_TRANSACTIONS_NUM": [ { "value": "6", "resolve_type": "generated", "format": "long", "usage": "all" } ],
         "C_M00_AXI_START_DATA_VALUE": [ { "value": "0x00000000", "resolve_type": "generated", "format": "bitString", "usage": "all" } ],
         "C_M00_AXI_TARGET_SLAVE_BASE_ADDR": [ { "value": "0x00000000", "resolve_type": "generated", "format": "bitString", "usage": "all" } ],
         "C_M00_AXI_ADDR_WIDTH": [ { "value": "32", "resolve_type": "generated", "format": "long", "usage": "all" } ],
@@ -59,7 +59,7 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "20" } ],
+        "IPREVISION": [ { "value": "39" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../../../CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ip/can_test_Gateway_Logik_0_0" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],

@@ -1,7 +1,7 @@
 Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
-| Date             : Sun Aug 17 09:55:56 2025
+| Date             : Sun Aug 17 19:21:39 2025
 | Host             : work5.itiv.kit.edu running 64-bit Rocky Linux 9.6 (Blue Onyx)
 | Command          : report_power -file can_test_wrapper_power_routed.rpt -pb can_test_wrapper_power_summary_routed.pb -rpx can_test_wrapper_power_routed.rpx
 | Design           : can_test_wrapper
@@ -33,7 +33,7 @@ Table of Contents
 | Total On-Chip Power (W)  | 0.779        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.129        |
+| Dynamic (W)              | 0.130        |
 | Device Static (W)        | 0.649        |
 | Effective TJA (C/W)      | 1.0          |
 | Max Ambient (C)          | 99.2         |
@@ -53,14 +53,14 @@ Table of Contents
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
 | Clocks                  |     0.006 |        5 |       --- |             --- |
-| CLB Logic               |    <0.001 |     2960 |       --- |             --- |
-|   LUT as Logic          |    <0.001 |     1199 |    274080 |            0.44 |
-|   Register              |    <0.001 |     1298 |    548160 |            0.24 |
+| CLB Logic               |    <0.001 |     3011 |       --- |             --- |
+|   LUT as Logic          |    <0.001 |     1217 |    274080 |            0.44 |
+|   Register              |    <0.001 |     1323 |    548160 |            0.24 |
 |   CARRY8                |    <0.001 |        4 |     34260 |            0.01 |
 |   LUT as Shift Register |    <0.001 |        1 |    144000 |           <0.01 |
-|   Others                |     0.000 |      112 |       --- |             --- |
-|   F7/F8 Muxes           |     0.000 |       16 |    274080 |           <0.01 |
-| Signals                 |    <0.001 |     2452 |       --- |             --- |
+|   Others                |     0.000 |      116 |       --- |             --- |
+|   F7/F8 Muxes           |     0.000 |       18 |    274080 |           <0.01 |
+| Signals                 |    <0.001 |     2483 |       --- |             --- |
 | Block RAM               |    <0.001 |      2.5 |       912 |            0.27 |
 | MMCM                    |     0.099 |        0 |       --- |             --- |
 | I/O                     |     0.023 |       17 |       328 |            5.18 |
@@ -79,7 +79,7 @@ Table of Contents
 | Vccint_io       |       0.850 |     0.036 |       0.001 |      0.035 |       NA    | Unspecified | NA         |
 | Vccbram         |       0.850 |     0.003 |       0.000 |      0.003 |       NA    | Unspecified | NA         |
 | Vccaux          |       1.800 |     0.249 |       0.055 |      0.195 |       NA    | Unspecified | NA         |
-| Vccaux_io       |       1.800 |     0.036 |       0.003 |      0.033 |       NA    | Unspecified | NA         |
+| Vccaux_io       |       1.800 |     0.036 |       0.004 |      0.033 |       NA    | Unspecified | NA         |
 | Vcco33          |       3.300 |     0.013 |       0.005 |      0.009 |       NA    | Unspecified | NA         |
 | Vcco25          |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18          |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -164,12 +164,12 @@ Table of Contents
 +---------------------+-----------+
 | Name                | Power (W) |
 +---------------------+-----------+
-| can_test_wrapper    |     0.129 |
+| can_test_wrapper    |     0.130 |
 |   can_test_i        |     0.110 |
 |     Gateway_Logik_0 |     0.002 |
 |       U0            |     0.002 |
-|     can_0           |     0.003 |
-|       U0            |     0.003 |
+|     can_0           |     0.004 |
+|       U0            |     0.004 |
 |     can_1           |     0.002 |
 |       U0            |     0.002 |
 |     clk_wiz_0       |     0.102 |

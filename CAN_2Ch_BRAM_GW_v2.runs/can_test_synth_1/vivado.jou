@@ -2,8 +2,8 @@
 # Vivado v2022.2.2 (64-bit)
 # SW Build 3788238 on Tue Feb 21 19:59:23 MST 2023
 # IP Build 3783773 on Tue Feb 21 23:41:56 MST 2023
-# Start of session at: Sun Aug 17 09:50:40 2025
-# Process ID: 3472230
+# Start of session at: Sun Aug 17 19:16:25 2025
+# Process ID: 583620
 # Current directory: /home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.runs/can_test_synth_1
 # Command line: vivado -log can_test.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source can_test.tcl
 # Log file: /home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.runs/can_test_synth_1/can_test.vds

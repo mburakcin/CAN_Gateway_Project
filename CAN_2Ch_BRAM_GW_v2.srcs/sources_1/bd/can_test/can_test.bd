@@ -882,7 +882,7 @@
             "value": "0x00000000"
           },
           "C_M01_AXI_TRANSACTIONS_NUM": {
-            "value": "5"
+            "value": "6"
           },
           "C_M02_AXI_START_DATA_VALUE": {
             "value": "0x00000000"

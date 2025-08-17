@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: user.org:user:Gateway_Logik:1.1
--- IP Revision: 20
+-- IP Revision: 39
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -337,7 +337,7 @@ BEGIN
       C_M01_AXI_TARGET_SLAVE_BASE_ADDR => X"00000000",
       C_M01_AXI_ADDR_WIDTH => 32,
       C_M01_AXI_DATA_WIDTH => 32,
-      C_M01_AXI_TRANSACTIONS_NUM => 5,
+      C_M01_AXI_TRANSACTIONS_NUM => 6,
       C_M00_AXI_START_DATA_VALUE => X"00000000",
       C_M00_AXI_TARGET_SLAVE_BASE_ADDR => X"00000000",
       C_M00_AXI_ADDR_WIDTH => 32,

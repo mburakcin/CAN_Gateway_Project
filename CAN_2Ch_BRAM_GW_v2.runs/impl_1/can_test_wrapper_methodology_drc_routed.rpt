@@ -1,7 +1,7 @@
 Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
-| Date         : Sun Aug 17 09:55:50 2025
+| Date         : Sun Aug 17 19:21:32 2025
 | Host         : work5.itiv.kit.edu running 64-bit Rocky Linux 9.6 (Blue Onyx)
 | Command      : report_methodology -file can_test_wrapper_methodology_drc_routed.rpt -pb can_test_wrapper_methodology_drc_routed.pb -rpx can_test_wrapper_methodology_drc_routed.rpx
 | Design       : can_test_wrapper
@@ -23,11 +23,11 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 4
+             Violations found: 5
 +----------+----------+------------------------------+------------+
 | Rule     | Severity | Description                  | Violations |
 +----------+----------+------------------------------+------------+
-| LUTAR-1  | Warning  | LUT drives async reset alert | 3          |
+| LUTAR-1  | Warning  | LUT drives async reset alert | 4          |
 | TIMING-9 | Warning  | Unknown CDC Logic            | 1          |
 +----------+----------+------------------------------+------------+
 
@@ -35,17 +35,23 @@ Table of Contents
 -----------------
 LUTAR-1#1 Warning
 LUT drives async reset alert  
+LUT cell can_test_i/can_0/U0/core_options.cantop_i/CANCORE_LOGIC_I/ol/ic/E_RST_I_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) can_test_i/can_0/U0/core_options.cantop_i/CANCORE_LOGIC_I/ol/olsync/OL_FIFO_RST_FS1_reg/PRE
+can_test_i/can_0/U0/core_options.cantop_i/CANCORE_LOGIC_I/ol/olsync/OL_FIFO_RST_FS2_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#2 Warning
+LUT drives async reset alert  
 LUT cell can_test_i/can_0/U0/core_options.cantop_i/CANCORE_LOGIC_I/ol/ic/SYNC_TL_RST_FS1_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) can_test_i/can_0/U0/core_options.cantop_i/CANCORE_LOGIC_I/ol/olsync/SYNC_TL_RST_FS1_reg/PRE
 can_test_i/can_0/U0/core_options.cantop_i/CANCORE_LOGIC_I/ol/olsync/SYNC_TL_RST_FS2_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
-LUTAR-1#2 Warning
+LUTAR-1#3 Warning
 LUT drives async reset alert  
 LUT cell can_test_i/can_1/U0/core_options.cantop_i/CANCORE_LOGIC_I/ol/ic/E_RST_I_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) can_test_i/can_1/U0/core_options.cantop_i/CANCORE_LOGIC_I/ol/olsync/OL_FIFO_RST_FS1_reg/PRE
 can_test_i/can_1/U0/core_options.cantop_i/CANCORE_LOGIC_I/ol/olsync/OL_FIFO_RST_FS2_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
-LUTAR-1#3 Warning
+LUTAR-1#4 Warning
 LUT drives async reset alert  
 LUT cell can_test_i/can_1/U0/core_options.cantop_i/CANCORE_LOGIC_I/ol/ic/SYNC_TL_RST_FS1_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) can_test_i/can_1/U0/core_options.cantop_i/CANCORE_LOGIC_I/ol/olsync/SYNC_TL_RST_FS1_reg/PRE
 can_test_i/can_1/U0/core_options.cantop_i/CANCORE_LOGIC_I/ol/olsync/SYNC_TL_RST_FS2_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.

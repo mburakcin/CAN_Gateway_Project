@@ -1,6 +1,405 @@
 Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
+| Date         : Sun Aug 17 19:16:06 2025
+| Host         : work5.itiv.kit.edu running 64-bit Rocky Linux 9.6 (Blue Onyx)
+| Command      : upgrade_ip
+| Device       : xczu9eg-ffvb1156-2-e
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'can_test_Gateway_Logik_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of can_test_Gateway_Logik_0_0 (user.org:user:Gateway_Logik:1.1) from (Rev. 38) to (Rev. 39)
+
+
+
+
+
+
+Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
+| Date         : Sun Aug 17 18:57:28 2025
+| Host         : work5.itiv.kit.edu running 64-bit Rocky Linux 9.6 (Blue Onyx)
+| Command      : upgrade_ip
+| Device       : xczu9eg-ffvb1156-2-e
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'can_test_Gateway_Logik_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of can_test_Gateway_Logik_0_0 (user.org:user:Gateway_Logik:1.1) from (Rev. 37) to (Rev. 38)
+
+
+
+
+
+
+Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
+| Date         : Sun Aug 17 18:49:02 2025
+| Host         : work5.itiv.kit.edu running 64-bit Rocky Linux 9.6 (Blue Onyx)
+| Command      : upgrade_ip
+| Device       : xczu9eg-ffvb1156-2-e
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'can_test_Gateway_Logik_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of can_test_Gateway_Logik_0_0 (user.org:user:Gateway_Logik:1.1) from (Rev. 36) to (Rev. 37)
+
+
+
+
+
+
+Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
+| Date         : Sun Aug 17 18:39:09 2025
+| Host         : work5.itiv.kit.edu running 64-bit Rocky Linux 9.6 (Blue Onyx)
+| Command      : upgrade_ip
+| Device       : xczu9eg-ffvb1156-2-e
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'can_test_Gateway_Logik_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of can_test_Gateway_Logik_0_0 (user.org:user:Gateway_Logik:1.1) from (Rev. 35) to (Rev. 36)
+
+
+
+
+
+
+Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
+| Date         : Sun Aug 17 18:30:31 2025
+| Host         : work5.itiv.kit.edu running 64-bit Rocky Linux 9.6 (Blue Onyx)
+| Command      : upgrade_ip
+| Device       : xczu9eg-ffvb1156-2-e
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'can_test_Gateway_Logik_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of can_test_Gateway_Logik_0_0 (user.org:user:Gateway_Logik:1.1) from (Rev. 34) to (Rev. 35)
+
+
+
+
+
+
+Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
+| Date         : Sun Aug 17 18:24:58 2025
+| Host         : work5.itiv.kit.edu running 64-bit Rocky Linux 9.6 (Blue Onyx)
+| Command      : upgrade_ip
+| Device       : xczu9eg-ffvb1156-2-e
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'can_test_Gateway_Logik_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of can_test_Gateway_Logik_0_0 (user.org:user:Gateway_Logik:1.1) from (Rev. 33) to (Rev. 34)
+
+
+
+
+
+
+Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
+| Date         : Sun Aug 17 18:18:09 2025
+| Host         : work5.itiv.kit.edu running 64-bit Rocky Linux 9.6 (Blue Onyx)
+| Command      : upgrade_ip
+| Device       : xczu9eg-ffvb1156-2-e
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'can_test_Gateway_Logik_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of can_test_Gateway_Logik_0_0 (user.org:user:Gateway_Logik:1.1) from (Rev. 32) to (Rev. 33)
+
+
+
+
+
+
+Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
+| Date         : Sun Aug 17 17:42:11 2025
+| Host         : work5.itiv.kit.edu running 64-bit Rocky Linux 9.6 (Blue Onyx)
+| Command      : upgrade_ip
+| Device       : xczu9eg-ffvb1156-2-e
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'can_test_Gateway_Logik_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of can_test_Gateway_Logik_0_0 (user.org:user:Gateway_Logik:1.1) from (Rev. 31) to (Rev. 32)
+
+
+
+
+
+
+Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
+| Date         : Sun Aug 17 17:33:36 2025
+| Host         : work5.itiv.kit.edu running 64-bit Rocky Linux 9.6 (Blue Onyx)
+| Command      : upgrade_ip
+| Device       : xczu9eg-ffvb1156-2-e
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'can_test_Gateway_Logik_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of can_test_Gateway_Logik_0_0 (user.org:user:Gateway_Logik:1.1) from (Rev. 30) to (Rev. 31)
+
+
+
+
+
+
+Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
+| Date         : Sun Aug 17 15:56:10 2025
+| Host         : work5.itiv.kit.edu running 64-bit Rocky Linux 9.6 (Blue Onyx)
+| Command      : upgrade_ip
+| Device       : xczu9eg-ffvb1156-2-e
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'can_test_Gateway_Logik_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of can_test_Gateway_Logik_0_0 (user.org:user:Gateway_Logik:1.1) from (Rev. 29) to (Rev. 30)
+
+
+
+
+
+
+Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
+| Date         : Sun Aug 17 15:39:25 2025
+| Host         : work5.itiv.kit.edu running 64-bit Rocky Linux 9.6 (Blue Onyx)
+| Command      : upgrade_ip
+| Device       : xczu9eg-ffvb1156-2-e
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'can_test_Gateway_Logik_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of can_test_Gateway_Logik_0_0 (user.org:user:Gateway_Logik:1.1) from (Rev. 28) to (Rev. 29)
+
+
+
+
+
+
+Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
+| Date         : Sun Aug 17 15:03:46 2025
+| Host         : work5.itiv.kit.edu running 64-bit Rocky Linux 9.6 (Blue Onyx)
+| Command      : upgrade_ip
+| Device       : xczu9eg-ffvb1156-2-e
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'can_test_Gateway_Logik_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of can_test_Gateway_Logik_0_0 (user.org:user:Gateway_Logik:1.1) from (Rev. 27) to (Rev. 28)
+
+
+
+
+
+
+Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
+| Date         : Sun Aug 17 14:50:06 2025
+| Host         : work5.itiv.kit.edu running 64-bit Rocky Linux 9.6 (Blue Onyx)
+| Command      : upgrade_ip
+| Device       : xczu9eg-ffvb1156-2-e
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'can_test_Gateway_Logik_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of can_test_Gateway_Logik_0_0 (user.org:user:Gateway_Logik:1.1) from (Rev. 26) to (Rev. 27)
+
+
+
+
+
+
+Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
+| Date         : Sun Aug 17 14:40:25 2025
+| Host         : work5.itiv.kit.edu running 64-bit Rocky Linux 9.6 (Blue Onyx)
+| Command      : upgrade_ip
+| Device       : xczu9eg-ffvb1156-2-e
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'can_test_Gateway_Logik_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of can_test_Gateway_Logik_0_0 (user.org:user:Gateway_Logik:1.1) from (Rev. 25) to (Rev. 26)
+
+
+
+
+
+
+Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
+| Date         : Sun Aug 17 14:30:14 2025
+| Host         : work5.itiv.kit.edu running 64-bit Rocky Linux 9.6 (Blue Onyx)
+| Command      : upgrade_ip
+| Device       : xczu9eg-ffvb1156-2-e
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'can_test_Gateway_Logik_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of can_test_Gateway_Logik_0_0 (user.org:user:Gateway_Logik:1.1) from (Rev. 24) to (Rev. 25)
+
+
+
+
+
+
+Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
+| Date         : Sun Aug 17 13:52:52 2025
+| Host         : work5.itiv.kit.edu running 64-bit Rocky Linux 9.6 (Blue Onyx)
+| Command      : upgrade_ip
+| Device       : xczu9eg-ffvb1156-2-e
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'can_test_Gateway_Logik_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of can_test_Gateway_Logik_0_0 (user.org:user:Gateway_Logik:1.1) from (Rev. 23) to (Rev. 24)
+
+
+
+
+
+
+Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
+| Date         : Sun Aug 17 13:34:16 2025
+| Host         : work5.itiv.kit.edu running 64-bit Rocky Linux 9.6 (Blue Onyx)
+| Command      : upgrade_ip
+| Device       : xczu9eg-ffvb1156-2-e
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'can_test_Gateway_Logik_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of can_test_Gateway_Logik_0_0 (user.org:user:Gateway_Logik:1.1) from (Rev. 22) to (Rev. 23)
+
+
+
+
+
+
+Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
+| Date         : Sun Aug 17 11:41:57 2025
+| Host         : work5.itiv.kit.edu running 64-bit Rocky Linux 9.6 (Blue Onyx)
+| Command      : upgrade_ip
+| Device       : xczu9eg-ffvb1156-2-e
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'can_test_Gateway_Logik_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of can_test_Gateway_Logik_0_0 (user.org:user:Gateway_Logik:1.1) from (Rev. 21) to (Rev. 22)
+
+
+
+
+
+
+Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
+| Date         : Sun Aug 17 10:46:18 2025
+| Host         : work5.itiv.kit.edu running 64-bit Rocky Linux 9.6 (Blue Onyx)
+| Command      : upgrade_ip
+| Device       : xczu9eg-ffvb1156-2-e
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'can_test_Gateway_Logik_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of can_test_Gateway_Logik_0_0 (user.org:user:Gateway_Logik:1.1) from (Rev. 20) to (Rev. 21)
+
+
+
+
+
+
+Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
 | Date         : Sun Aug 17 09:49:52 2025
 | Host         : work5.itiv.kit.edu running 64-bit Rocky Linux 9.6 (Blue Onyx)
 | Command      : upgrade_ip
