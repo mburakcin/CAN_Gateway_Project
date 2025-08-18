@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Aug 18 00:23:07 2025" VIVADOVERSION="2022.2.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Aug 18 20:53:30 2025" VIVADOVERSION="2022.2.2">
 
   <SYSTEMINFO ARCH="zynquplus" BOARD="xilinx.com:zcu102:part0:3.4" DEVICE="xczu9eg" NAME="can_test" PACKAGE="ffvb1156" SPEEDGRADE="-2"/>
 
@@ -103,7 +103,7 @@
   </EXTERNALINTERFACES>
 
   <MODULES>
-    <MODULE COREREVISION="41" FULLNAME="/Gateway_Logik_0" HWVERSION="1.1" INSTANCE="Gateway_Logik_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Gateway_Logik" VLNV="user.org:user:Gateway_Logik:1.1">
+    <MODULE COREREVISION="42" FULLNAME="/Gateway_Logik_0" HWVERSION="1.1" INSTANCE="Gateway_Logik_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="Gateway_Logik" VLNV="user.org:user:Gateway_Logik:1.1">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="C_M02_AXI_START_DATA_VALUE" VALUE="0x00000000"/>
@@ -693,9 +693,9 @@
         <PARAMETER NAME="NUM_SI" VALUE="1"/>
         <PARAMETER NAME="NUM_MI" VALUE="1"/>
         <PARAMETER NAME="STRATEGY" VALUE="0"/>
-        <PARAMETER NAME="ENABLE_ADVANCED_OPTIONS" VALUE="0"/>
+        <PARAMETER NAME="ENABLE_ADVANCED_OPTIONS" VALUE="1"/>
         <PARAMETER NAME="ENABLE_PROTOCOL_CHECKERS" VALUE="0"/>
-        <PARAMETER NAME="XBAR_DATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="XBAR_DATA_WIDTH" VALUE="128"/>
         <PARAMETER NAME="PCHK_WAITS" VALUE="0"/>
         <PARAMETER NAME="PCHK_MAX_RD_BURSTS" VALUE="2"/>
         <PARAMETER NAME="PCHK_MAX_WR_BURSTS" VALUE="2"/>
@@ -1278,9 +1278,9 @@
         <PARAMETER NAME="NUM_SI" VALUE="1"/>
         <PARAMETER NAME="NUM_MI" VALUE="1"/>
         <PARAMETER NAME="STRATEGY" VALUE="0"/>
-        <PARAMETER NAME="ENABLE_ADVANCED_OPTIONS" VALUE="0"/>
+        <PARAMETER NAME="ENABLE_ADVANCED_OPTIONS" VALUE="1"/>
         <PARAMETER NAME="ENABLE_PROTOCOL_CHECKERS" VALUE="0"/>
-        <PARAMETER NAME="XBAR_DATA_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="XBAR_DATA_WIDTH" VALUE="128"/>
         <PARAMETER NAME="PCHK_WAITS" VALUE="0"/>
         <PARAMETER NAME="PCHK_MAX_RD_BURSTS" VALUE="2"/>
         <PARAMETER NAME="PCHK_MAX_WR_BURSTS" VALUE="2"/>
@@ -3908,7 +3908,6 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="can_0" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="proc_sys_reset_0" PORT="slowest_sync_clk"/>
-            <CONNECTION INSTANCE="tx_pulse_generator_0" PORT="AXI_CLK"/>
             <CONNECTION INSTANCE="frequency_test_0" PORT="main_freq_in"/>
             <CONNECTION INSTANCE="axi_bram_ctrl_0" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="can_1" PORT="s_axi_aclk"/>
@@ -3921,6 +3920,7 @@
             <CONNECTION INSTANCE="Gateway_Logik_0_axi_periph_1" PORT="ACLK"/>
             <CONNECTION INSTANCE="Gateway_Logik_0_axi_periph_1" PORT="S00_ACLK"/>
             <CONNECTION INSTANCE="Gateway_Logik_0_axi_periph_1" PORT="M00_ACLK"/>
+            <CONNECTION INSTANCE="tx_pulse_generator_0" PORT="AXI_CLK"/>
             <CONNECTION INSTANCE="Gateway_Logik_0" PORT="m00_axi_aclk"/>
             <CONNECTION INSTANCE="Gateway_Logik_0" PORT="m01_axi_aclk"/>
             <CONNECTION INSTANCE="Gateway_Logik_0" PORT="m02_axi_aclk"/>

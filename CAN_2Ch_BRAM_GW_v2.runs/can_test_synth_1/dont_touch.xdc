@@ -13,9 +13,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==can_test_pr
 # IP: /home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.srcs/sources_1/bd/can_test/ip/can_test_input_register_can_0_0/can_test_input_register_can_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==can_test_input_register_can_0_0 || ORIG_REF_NAME==can_test_input_register_can_0_0} -quiet] -quiet
 
-# IP: /home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.srcs/sources_1/bd/can_test/ip/can_test_tx_pulse_generator_0_0/can_test_tx_pulse_generator_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==can_test_tx_pulse_generator_0_0 || ORIG_REF_NAME==can_test_tx_pulse_generator_0_0} -quiet] -quiet
-
 # IP: /home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.srcs/sources_1/bd/can_test/ip/can_test_frequency_test_0_0/can_test_frequency_test_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==can_test_frequency_test_0_0 || ORIG_REF_NAME==can_test_frequency_test_0_0} -quiet] -quiet
 
@@ -45,6 +42,9 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==can_test_Ga
 
 # IP: /home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.srcs/sources_1/bd/can_test/ip/can_test_Gateway_Logik_0_0/can_test_Gateway_Logik_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==can_test_Gateway_Logik_0_0 || ORIG_REF_NAME==can_test_Gateway_Logik_0_0} -quiet] -quiet
+
+# IP: /home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.srcs/sources_1/bd/can_test/ip/can_test_tx_pulse_generator_0_0/can_test_tx_pulse_generator_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==can_test_tx_pulse_generator_0_0 || ORIG_REF_NAME==can_test_tx_pulse_generator_0_0} -quiet] -quiet
 
 # XDC: /home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ip/can_test_can_0_0/can_test_can_0_0.xdc
 set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==can_test_can_0_0 || ORIG_REF_NAME==can_test_can_0_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
@@ -87,9 +87,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filte
 # IP: /home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.srcs/sources_1/bd/can_test/ip/can_test_input_register_can_0_0/can_test_input_register_can_0_0.xci
 #dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==can_test_input_register_can_0_0 || ORIG_REF_NAME==can_test_input_register_can_0_0} -quiet] -quiet
 
-# IP: /home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.srcs/sources_1/bd/can_test/ip/can_test_tx_pulse_generator_0_0/can_test_tx_pulse_generator_0_0.xci
-#dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==can_test_tx_pulse_generator_0_0 || ORIG_REF_NAME==can_test_tx_pulse_generator_0_0} -quiet] -quiet
-
 # IP: /home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.srcs/sources_1/bd/can_test/ip/can_test_frequency_test_0_0/can_test_frequency_test_0_0.xci
 #dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==can_test_frequency_test_0_0 || ORIG_REF_NAME==can_test_frequency_test_0_0} -quiet] -quiet
 
@@ -119,6 +116,9 @@ set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filte
 
 # IP: /home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.srcs/sources_1/bd/can_test/ip/can_test_Gateway_Logik_0_0/can_test_Gateway_Logik_0_0.xci
 #dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==can_test_Gateway_Logik_0_0 || ORIG_REF_NAME==can_test_Gateway_Logik_0_0} -quiet] -quiet
+
+# IP: /home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.srcs/sources_1/bd/can_test/ip/can_test_tx_pulse_generator_0_0/can_test_tx_pulse_generator_0_0.xci
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==can_test_tx_pulse_generator_0_0 || ORIG_REF_NAME==can_test_tx_pulse_generator_0_0} -quiet] -quiet
 
 # XDC: /home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ip/can_test_can_0_0/can_test_can_0_0.xdc
 #dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==can_test_can_0_0 || ORIG_REF_NAME==can_test_can_0_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet

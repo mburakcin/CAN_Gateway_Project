@@ -14,7 +14,6 @@
       "can_0": "",
       "proc_sys_reset_0": "",
       "input_register_can_0": "",
-      "tx_pulse_generator_0": "",
       "frequency_test_0": "",
       "clk_wiz_0": "",
       "can_1": "",
@@ -30,6 +29,7 @@
       "Gateway_Logik_0_axi_periph_1": {
         "s00_couplers": {}
       },
+      "tx_pulse_generator_0": "",
       "Gateway_Logik_0": ""
     },
     "interface_ports": {
@@ -163,35 +163,6 @@
             "direction": "I"
           },
           "can_rx_sync": {
-            "direction": "O"
-          }
-        }
-      },
-      "tx_pulse_generator_0": {
-        "vlnv": "xilinx.com:module_ref:tx_pulse_generator:1.0",
-        "xci_name": "can_test_tx_pulse_generator_0_0",
-        "xci_path": "ip/can_test_tx_pulse_generator_0_0/can_test_tx_pulse_generator_0_0.xci",
-        "inst_hier_path": "tx_pulse_generator_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "tx_pulse_generator",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "AXI_CLK": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "can_test_clk_wiz_0_2_clk_out1",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "CAN_POWERUP": {
-            "direction": "I"
-          },
-          "TX_PULSE": {
             "direction": "O"
           }
         }
@@ -530,8 +501,14 @@
         "inst_hier_path": "Gateway_Logik_0_axi_periph",
         "xci_name": "can_test_Gateway_Logik_0_axi_periph_0",
         "parameters": {
+          "ENABLE_ADVANCED_OPTIONS": {
+            "value": "1"
+          },
           "NUM_MI": {
             "value": "1"
+          },
+          "XBAR_DATA_WIDTH": {
+            "value": "128"
           }
         },
         "interface_ports": {
@@ -698,8 +675,14 @@
         "inst_hier_path": "Gateway_Logik_0_axi_periph_1",
         "xci_name": "can_test_Gateway_Logik_0_axi_periph_1_0",
         "parameters": {
+          "ENABLE_ADVANCED_OPTIONS": {
+            "value": "1"
+          },
           "NUM_MI": {
             "value": "1"
+          },
+          "XBAR_DATA_WIDTH": {
+            "value": "128"
           }
         },
         "interface_ports": {
@@ -857,6 +840,35 @@
               "S00_ARESETN",
               "s00_couplers/S_ARESETN"
             ]
+          }
+        }
+      },
+      "tx_pulse_generator_0": {
+        "vlnv": "xilinx.com:module_ref:tx_pulse_generator:1.0",
+        "xci_name": "can_test_tx_pulse_generator_0_0",
+        "xci_path": "ip/can_test_tx_pulse_generator_0_0/can_test_tx_pulse_generator_0_0.xci",
+        "inst_hier_path": "tx_pulse_generator_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "tx_pulse_generator",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "AXI_CLK": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "can_test_clk_wiz_0_2_clk_out1",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "CAN_POWERUP": {
+            "direction": "I"
+          },
+          "TX_PULSE": {
+            "direction": "O"
           }
         }
       },
@@ -1084,7 +1096,6 @@
           "clk_wiz_0/clk_out1",
           "can_0/s_axi_aclk",
           "proc_sys_reset_0/slowest_sync_clk",
-          "tx_pulse_generator_0/AXI_CLK",
           "frequency_test_0/main_freq_in",
           "axi_bram_ctrl_0/s_axi_aclk",
           "can_1/s_axi_aclk",
@@ -1097,6 +1108,7 @@
           "Gateway_Logik_0_axi_periph_1/ACLK",
           "Gateway_Logik_0_axi_periph_1/S00_ACLK",
           "Gateway_Logik_0_axi_periph_1/M00_ACLK",
+          "tx_pulse_generator_0/AXI_CLK",
           "Gateway_Logik_0/m00_axi_aclk",
           "Gateway_Logik_0/m01_axi_aclk",
           "Gateway_Logik_0/m02_axi_aclk"

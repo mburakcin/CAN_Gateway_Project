@@ -47,7 +47,6 @@ vcom -work proc_sys_reset_v5_0_13 -93  \
 vcom -work xil_defaultlib -93  \
 "../../../bd/can_test/ip/can_test_proc_sys_reset_0_0/sim/can_test_proc_sys_reset_0_0.vhd" \
 "../../../bd/can_test/ip/can_test_input_register_can_0_0/sim/can_test_input_register_can_0_0.vhd" \
-"../../../bd/can_test/ip/can_test_tx_pulse_generator_0_0/sim/can_test_tx_pulse_generator_0_0.vhd" \
 "../../../bd/can_test/ip/can_test_frequency_test_0_0/sim/can_test_frequency_test_0_0.vhd" \
 
 vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7698" \
@@ -68,11 +67,12 @@ vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../CAN_2Ch_BRAM_GW_v2.gen/sou
 
 vcom -work xil_defaultlib -93  \
 "../../../bd/can_test/ip/can_test_input_register_can_1_0/sim/can_test_input_register_can_1_0.vhd" \
-"../../../bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0_M00_AXI.vhd" \
-"../../../bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0_M01_AXI.vhd" \
-"../../../bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0_M02_AXI.vhd" \
-"../../../bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0.vhd" \
+"../../../bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0_M00_AXI.vhd" \
+"../../../bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0_M01_AXI.vhd" \
+"../../../bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0_M02_AXI.vhd" \
+"../../../bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0.vhd" \
 "../../../bd/can_test/ip/can_test_Gateway_Logik_0_0/sim/can_test_Gateway_Logik_0_0.vhd" \
+"../../../bd/can_test/ip/can_test_tx_pulse_generator_0_0/sim/can_test_tx_pulse_generator_0_0.vhd" \
 "../../../bd/can_test/sim/can_test.vhd" \
 
 vlog -work xil_defaultlib \

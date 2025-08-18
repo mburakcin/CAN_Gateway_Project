@@ -2,8 +2,8 @@
 # Vivado v2022.2.2 (64-bit)
 # SW Build 3788238 on Tue Feb 21 19:59:23 MST 2023
 # IP Build 3783773 on Tue Feb 21 23:41:56 MST 2023
-# Start of session at: Mon Aug 18 00:23:21 2025
-# Process ID: 1633410
+# Start of session at: Mon Aug 18 20:53:43 2025
+# Process ID: 152449
 # Current directory: /home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.runs/can_test_synth_1
 # Command line: vivado -log can_test.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source can_test.tcl
 # Log file: /home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.runs/can_test_synth_1/can_test.vds
@@ -11,7 +11,7 @@
 # Running On: work5.itiv.kit.edu, OS: Linux, CPU Frequency: 2000.000 MHz, CPU Physical cores: 32, Host memory: 540672 MB
 #-----------------------------------------------------------
 source can_test.tcl -notrace
-create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2338.617 ; gain = 97.062 ; free physical = 432328 ; free virtual = 515561
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2338.426 ; gain = 96.023 ; free physical = 344427 ; free virtual = 497919
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/upkmy/ip_repo/GW_Controller_1_0'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/upkmy/ip_repo/Gateway_Logik_1_0'.
@@ -21,11 +21,6 @@ WARNING: [BD 41-2576] File '/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.ge
 WARNING: [BD 41-2576] File '/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/can_test_stub.vhdl' referenced by design 'can_test' could not be found.
 WARNING: [BD 41-2576] File '/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/can_test_stub.v' referenced by design 'can_test' could not be found.
 WARNING: [BD 41-2576] File '/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/can_test.dcp' referenced by design 'can_test' could not be found.
-INFO: [IP_Flow 19-5107] Inferred bus interface 'AXI_CLK' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
-WARNING: [IP_Flow 19-5661] Bus Interface 'AXI_CLK' does not have any bus interfaces associated with it.
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/upkmy/ip_repo/GW_Controller_1_0'.
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/upkmy/ip_repo/Gateway_Logik_1_0'.
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/upkmy/ip_repo/GW_Controller_1_0'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/upkmy/ip_repo/Gateway_Logik_1_0'.
@@ -34,7 +29,12 @@ WARNING: [IP_Flow 19-5661] Bus Interface 'can_clk' does not have any bus interfa
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/upkmy/ip_repo/GW_Controller_1_0'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/upkmy/ip_repo/Gateway_Logik_1_0'.
-add_files: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 2609.043 ; gain = 242.707 ; free physical = 432342 ; free virtual = 515541
+INFO: [IP_Flow 19-5107] Inferred bus interface 'AXI_CLK' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'AXI_CLK' does not have any bus interfaces associated with it.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/upkmy/ip_repo/GW_Controller_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/upkmy/ip_repo/Gateway_Logik_1_0'.
+add_files: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 2609.434 ; gain = 242.289 ; free physical = 344387 ; free virtual = 497887
 Command: synth_design -top can_test -part xczu9eg-ffvb1156-2-e -incremental_mode off -mode out_of_context
 Starting synth_design
 WARNING: [Vivado_Tcl 4-393] The 'Synthesis' target of the following IPs are stale, please generate the output products using the generate_target or synth_ip command before running synth_design.
@@ -49,12 +49,12 @@ INFO: [Common 17-1540] The version limit for your license is '2024.05' and has e
 INFO: [Device 21-403] Loading part xczu9eg-ffvb1156-2-e
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 1633943
+INFO: [Synth 8-7075] Helper process launched with PID 153476
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/tools/xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3591.633 ; gain = 230.828 ; free physical = 430953 ; free virtual = 514150
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2697.795; parent = 2514.858; children = 182.937
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 5214.625; parent = 3595.605; children = 1619.020
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3592.457 ; gain = 231.828 ; free physical = 342996 ; free virtual = 496479
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2663.132; parent = 2489.063; children = 174.068
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 5179.410; parent = 3595.430; children = 1583.980
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'can_test' [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/synth/can_test.vhd:876]
 INFO: [Synth 8-3491] module 'can_test_Gateway_Logik_0_0' declared at '/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ip/can_test_Gateway_Logik_0_0/synth/can_test_Gateway_Logik_0_0.vhd:56' bound to instance 'Gateway_Logik_0' of component 'can_test_Gateway_Logik_0_0' [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/synth/can_test.vhd:1290]
@@ -74,54 +74,58 @@ INFO: [Synth 8-638] synthesizing module 'can_test_Gateway_Logik_0_0' [/home/upkm
 	Parameter C_M00_AXI_ADDR_WIDTH bound to: 32 - type: integer 
 	Parameter C_M00_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_M00_AXI_TRANSACTIONS_NUM bound to: 6 - type: integer 
-INFO: [Synth 8-3491] module 'Gateway_Logik_v1_0' declared at '/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0.vhd:5' bound to instance 'U0' of component 'Gateway_Logik_v1_0' [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ip/can_test_Gateway_Logik_0_0/synth/can_test_Gateway_Logik_0_0.vhd:329]
-INFO: [Synth 8-638] synthesizing module 'Gateway_Logik_v1_0' [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0.vhd:129]
-WARNING: [Synth 8-5640] Port 'main_freq_test_probe' is missing in component declaration [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0.vhd:137]
-WARNING: [Synth 8-5640] Port 'can_freq_test_probe' is missing in component declaration [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0.vhd:137]
+INFO: [Synth 8-3491] module 'Gateway_Logik_v1_0' declared at '/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0.vhd:170' bound to instance 'U0' of component 'Gateway_Logik_v1_0' [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ip/can_test_Gateway_Logik_0_0/synth/can_test_Gateway_Logik_0_0.vhd:329]
+INFO: [Synth 8-638] synthesizing module 'Gateway_Logik_v1_0' [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0.vhd:292]
+WARNING: [Synth 8-5640] Port 'main_freq_test_probe' is missing in component declaration [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0.vhd:312]
+WARNING: [Synth 8-5640] Port 'can_freq_test_probe' is missing in component declaration [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0.vhd:312]
 	Parameter C_M_START_DATA_VALUE bound to: 32'b00000000000000000000000000000000 
 	Parameter C_M_TARGET_SLAVE_BASE_ADDR bound to: 32'b00000000000000000000000000000000 
 	Parameter C_M_AXI_ADDR_WIDTH bound to: 32 - type: integer 
 	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_M_TRANSACTIONS_NUM bound to: 6 - type: integer 
-INFO: [Synth 8-3491] module 'Gateway_Logik_v1_0_M00_AXI' declared at '/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0_M00_AXI.vhd:5' bound to instance 'Gateway_Logik_v1_0_M00_AXI_inst' of component 'Gateway_Logik_v1_0_M00_AXI' [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0.vhd:305]
-INFO: [Synth 8-638] synthesizing module 'Gateway_Logik_v1_0_M00_AXI' [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0_M00_AXI.vhd:128]
-INFO: [Synth 8-226] default block is never used [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0_M00_AXI.vhd:847]
-INFO: [Synth 8-256] done synthesizing module 'Gateway_Logik_v1_0_M00_AXI' (0#1) [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0_M00_AXI.vhd:128]
+INFO: [Synth 8-3491] module 'Gateway_Logik_v1_0_M00_AXI' declared at '/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0_M00_AXI.vhd:5' bound to instance 'Gateway_Logik_v1_0_M00_AXI_inst' of component 'Gateway_Logik_v1_0_M00_AXI' [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0.vhd:444]
+INFO: [Synth 8-638] synthesizing module 'Gateway_Logik_v1_0_M00_AXI' [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0_M00_AXI.vhd:128]
+INFO: [Synth 8-226] default block is never used [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0_M00_AXI.vhd:847]
+INFO: [Synth 8-256] done synthesizing module 'Gateway_Logik_v1_0_M00_AXI' (0#1) [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0_M00_AXI.vhd:128]
+INFO: [Synth 8-638] synthesizing module 'cdc_pulse' [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'cdc_pulse' (0#1) [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0.vhd:24]
+INFO: [Synth 8-638] synthesizing module 'cdc_bus_reqack' [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0.vhd:78]
+INFO: [Synth 8-256] done synthesizing module 'cdc_bus_reqack' (0#1) [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0.vhd:78]
 	Parameter C_M_START_DATA_VALUE bound to: 32'b00000000000000000000000000000000 
 	Parameter C_M_TARGET_SLAVE_BASE_ADDR bound to: 32'b00000000000000000000000000000000 
 	Parameter C_M_AXI_ADDR_WIDTH bound to: 32 - type: integer 
 	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_M_TRANSACTIONS_NUM bound to: 6 - type: integer 
-INFO: [Synth 8-3491] module 'Gateway_Logik_v1_0_M01_AXI' declared at '/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0_M01_AXI.vhd:5' bound to instance 'Gateway_Logik_v1_0_M01_AXI_inst' of component 'Gateway_Logik_v1_0_M01_AXI' [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0.vhd:371]
-INFO: [Synth 8-638] synthesizing module 'Gateway_Logik_v1_0_M01_AXI' [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0_M01_AXI.vhd:132]
-INFO: [Synth 8-226] default block is never used [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0_M01_AXI.vhd:753]
-INFO: [Synth 8-256] done synthesizing module 'Gateway_Logik_v1_0_M01_AXI' (0#1) [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0_M01_AXI.vhd:132]
-WARNING: [Synth 8-5640] Port 'receive_from_can0_canid' is missing in component declaration [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0.vhd:246]
-WARNING: [Synth 8-5640] Port 'receive_from_can0_candw1' is missing in component declaration [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0.vhd:246]
-WARNING: [Synth 8-5640] Port 'receive_from_can0_candw2' is missing in component declaration [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0.vhd:246]
-WARNING: [Synth 8-5640] Port 'receive_from_can1_canid' is missing in component declaration [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0.vhd:246]
-WARNING: [Synth 8-5640] Port 'receive_from_can1_candw1' is missing in component declaration [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0.vhd:246]
-WARNING: [Synth 8-5640] Port 'receive_from_can1_candw2' is missing in component declaration [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0.vhd:246]
-WARNING: [Synth 8-5640] Port 'send_to_can0_canid' is missing in component declaration [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0.vhd:246]
-WARNING: [Synth 8-5640] Port 'send_to_can0_candw1' is missing in component declaration [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0.vhd:246]
-WARNING: [Synth 8-5640] Port 'send_to_can0_candw2' is missing in component declaration [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0.vhd:246]
-WARNING: [Synth 8-5640] Port 'send_to_can1_canid' is missing in component declaration [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0.vhd:246]
-WARNING: [Synth 8-5640] Port 'send_to_can1_candw1' is missing in component declaration [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0.vhd:246]
-WARNING: [Synth 8-5640] Port 'send_to_can1_candw2' is missing in component declaration [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0.vhd:246]
-WARNING: [Synth 8-5640] Port 'rx_interrupt_from_can0' is missing in component declaration [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0.vhd:246]
-WARNING: [Synth 8-5640] Port 'rx_interrupt_from_can1' is missing in component declaration [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0.vhd:246]
-WARNING: [Synth 8-5640] Port 'tx_interrupt_to_can0' is missing in component declaration [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0.vhd:246]
-WARNING: [Synth 8-5640] Port 'tx_interrupt_to_can1' is missing in component declaration [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0.vhd:246]
+INFO: [Synth 8-3491] module 'Gateway_Logik_v1_0_M01_AXI' declared at '/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0_M01_AXI.vhd:5' bound to instance 'Gateway_Logik_v1_0_M01_AXI_inst' of component 'Gateway_Logik_v1_0_M01_AXI' [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0.vhd:528]
+INFO: [Synth 8-638] synthesizing module 'Gateway_Logik_v1_0_M01_AXI' [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0_M01_AXI.vhd:132]
+INFO: [Synth 8-226] default block is never used [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0_M01_AXI.vhd:753]
+INFO: [Synth 8-256] done synthesizing module 'Gateway_Logik_v1_0_M01_AXI' (0#1) [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0_M01_AXI.vhd:132]
+WARNING: [Synth 8-5640] Port 'receive_from_can0_canid' is missing in component declaration [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0.vhd:399]
+WARNING: [Synth 8-5640] Port 'receive_from_can0_candw1' is missing in component declaration [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0.vhd:399]
+WARNING: [Synth 8-5640] Port 'receive_from_can0_candw2' is missing in component declaration [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0.vhd:399]
+WARNING: [Synth 8-5640] Port 'receive_from_can1_canid' is missing in component declaration [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0.vhd:399]
+WARNING: [Synth 8-5640] Port 'receive_from_can1_candw1' is missing in component declaration [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0.vhd:399]
+WARNING: [Synth 8-5640] Port 'receive_from_can1_candw2' is missing in component declaration [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0.vhd:399]
+WARNING: [Synth 8-5640] Port 'send_to_can0_canid' is missing in component declaration [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0.vhd:399]
+WARNING: [Synth 8-5640] Port 'send_to_can0_candw1' is missing in component declaration [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0.vhd:399]
+WARNING: [Synth 8-5640] Port 'send_to_can0_candw2' is missing in component declaration [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0.vhd:399]
+WARNING: [Synth 8-5640] Port 'send_to_can1_canid' is missing in component declaration [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0.vhd:399]
+WARNING: [Synth 8-5640] Port 'send_to_can1_candw1' is missing in component declaration [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0.vhd:399]
+WARNING: [Synth 8-5640] Port 'send_to_can1_candw2' is missing in component declaration [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0.vhd:399]
+WARNING: [Synth 8-5640] Port 'rx_interrupt_from_can0' is missing in component declaration [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0.vhd:399]
+WARNING: [Synth 8-5640] Port 'rx_interrupt_from_can1' is missing in component declaration [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0.vhd:399]
+WARNING: [Synth 8-5640] Port 'tx_interrupt_to_can0' is missing in component declaration [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0.vhd:399]
+WARNING: [Synth 8-5640] Port 'tx_interrupt_to_can1' is missing in component declaration [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0.vhd:399]
 	Parameter C_M_START_DATA_VALUE bound to: 32'b00000000000000000000000000000000 
 	Parameter C_M_TARGET_SLAVE_BASE_ADDR bound to: 32'b00000000000000000000000000000000 
 	Parameter C_M_AXI_ADDR_WIDTH bound to: 32 - type: integer 
 	Parameter C_M_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_M_TRANSACTIONS_NUM bound to: 5 - type: integer 
-INFO: [Synth 8-3491] module 'Gateway_Logik_v1_0_M02_AXI' declared at '/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0_M02_AXI.vhd:5' bound to instance 'Gateway_Logik_v1_0_M02_AXI_inst' of component 'Gateway_Logik_v1_0_M02_AXI' [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0.vhd:424]
-INFO: [Synth 8-638] synthesizing module 'Gateway_Logik_v1_0_M02_AXI' [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0_M02_AXI.vhd:114]
-INFO: [Synth 8-226] default block is never used [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0_M02_AXI.vhd:566]
-INFO: [Synth 8-256] done synthesizing module 'Gateway_Logik_v1_0_M02_AXI' (0#1) [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0_M02_AXI.vhd:114]
-INFO: [Synth 8-256] done synthesizing module 'Gateway_Logik_v1_0' (0#1) [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0.vhd:129]
+INFO: [Synth 8-3491] module 'Gateway_Logik_v1_0_M02_AXI' declared at '/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0_M02_AXI.vhd:5' bound to instance 'Gateway_Logik_v1_0_M02_AXI_inst' of component 'Gateway_Logik_v1_0_M02_AXI' [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0.vhd:574]
+INFO: [Synth 8-638] synthesizing module 'Gateway_Logik_v1_0_M02_AXI' [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0_M02_AXI.vhd:114]
+INFO: [Synth 8-226] default block is never used [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0_M02_AXI.vhd:566]
+INFO: [Synth 8-256] done synthesizing module 'Gateway_Logik_v1_0_M02_AXI' (0#1) [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0_M02_AXI.vhd:114]
+INFO: [Synth 8-256] done synthesizing module 'Gateway_Logik_v1_0' (0#1) [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0.vhd:292]
 INFO: [Synth 8-256] done synthesizing module 'can_test_Gateway_Logik_0_0' (0#1) [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ip/can_test_Gateway_Logik_0_0/synth/can_test_Gateway_Logik_0_0.vhd:142]
 INFO: [Synth 8-638] synthesizing module 'can_test_Gateway_Logik_0_axi_periph_0' [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/synth/can_test.vhd:372]
 INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_NYYE1T' [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/synth/can_test.vhd:269]
@@ -536,33 +540,32 @@ INFO: [Synth 8-638] synthesizing module 'tx_pulse_generator' [/home/upkmy/CAN_2C
 INFO: [Synth 8-256] done synthesizing module 'tx_pulse_generator' (0#1) [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.srcs/sources_1/new/tx_pulse_generator.vhd:27]
 INFO: [Synth 8-256] done synthesizing module 'can_test_tx_pulse_generator_0_0' (0#1) [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ip/can_test_tx_pulse_generator_0_0/synth/can_test_tx_pulse_generator_0_0.vhd:64]
 INFO: [Synth 8-256] done synthesizing module 'can_test' (0#1) [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/synth/can_test.vhd:876]
-WARNING: [Synth 8-6014] Unused sequential element first_run_reg was removed.  [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0_M00_AXI.vhd:603]
-WARNING: [Synth 8-6014] Unused sequential element can_config_status_reg was removed.  [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0_M00_AXI.vhd:751]
-WARNING: [Synth 8-6014] Unused sequential element power_up_stat_awaddr_reg was removed.  [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0_M00_AXI.vhd:753]
-WARNING: [Synth 8-6014] Unused sequential element power_up_stat_wdata_reg was removed.  [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0_M00_AXI.vhd:754]
-WARNING: [Synth 8-6014] Unused sequential element can_send_state_reg was removed.  [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0_M00_AXI.vhd:1082]
-WARNING: [Synth 8-6014] Unused sequential element can_msg_pending_reg was removed.  [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0_M00_AXI.vhd:1083]
-WARNING: [Synth 8-6014] Unused sequential element status_reg_val_reg was removed.  [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0_M00_AXI.vhd:1094]
-WARNING: [Synth 8-3848] Net main_freq_test_probe in module/entity Gateway_Logik_v1_0_M00_AXI does not have driver. [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0_M00_AXI.vhd:33]
-WARNING: [Synth 8-3848] Net can_freq_test_probe in module/entity Gateway_Logik_v1_0_M00_AXI does not have driver. [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0_M00_AXI.vhd:34]
-WARNING: [Synth 8-3848] Net interrupt_enabled_led in module/entity Gateway_Logik_v1_0_M00_AXI does not have driver. [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0_M00_AXI.vhd:41]
-WARNING: [Synth 8-6014] Unused sequential element first_run_reg was removed.  [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0_M01_AXI.vhd:584]
-WARNING: [Synth 8-6014] Unused sequential element can_config_status_reg was removed.  [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0_M01_AXI.vhd:719]
-WARNING: [Synth 8-6014] Unused sequential element power_up_stat_awaddr_reg was removed.  [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0_M01_AXI.vhd:721]
-WARNING: [Synth 8-6014] Unused sequential element power_up_stat_wdata_reg was removed.  [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0_M01_AXI.vhd:722]
-WARNING: [Synth 8-6014] Unused sequential element can_send_state_reg was removed.  [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0_M01_AXI.vhd:992]
-WARNING: [Synth 8-6014] Unused sequential element can_msg_pending_reg was removed.  [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0_M01_AXI.vhd:993]
-WARNING: [Synth 8-6014] Unused sequential element status_reg_val_reg was removed.  [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0_M01_AXI.vhd:1004]
-WARNING: [Synth 8-3848] Net SEND_TO_CAN0_CANID in module/entity Gateway_Logik_v1_0_M02_AXI does not have driver. [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0_M02_AXI.vhd:36]
-WARNING: [Synth 8-3848] Net SEND_TO_CAN0_CANDW1 in module/entity Gateway_Logik_v1_0_M02_AXI does not have driver. [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0_M02_AXI.vhd:37]
-WARNING: [Synth 8-3848] Net SEND_TO_CAN0_CANDW2 in module/entity Gateway_Logik_v1_0_M02_AXI does not have driver. [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0_M02_AXI.vhd:38]
-WARNING: [Synth 8-3848] Net SEND_TO_CAN1_CANID in module/entity Gateway_Logik_v1_0_M02_AXI does not have driver. [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0_M02_AXI.vhd:39]
-WARNING: [Synth 8-3848] Net SEND_TO_CAN1_CANDW1 in module/entity Gateway_Logik_v1_0_M02_AXI does not have driver. [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0_M02_AXI.vhd:40]
-WARNING: [Synth 8-3848] Net SEND_TO_CAN1_CANDW2 in module/entity Gateway_Logik_v1_0_M02_AXI does not have driver. [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/7f80/hdl/Gateway_Logik_v1_0_M02_AXI.vhd:41]
+WARNING: [Synth 8-6014] Unused sequential element first_run_reg was removed.  [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0_M00_AXI.vhd:603]
+WARNING: [Synth 8-6014] Unused sequential element can_config_status_reg was removed.  [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0_M00_AXI.vhd:751]
+WARNING: [Synth 8-6014] Unused sequential element power_up_stat_awaddr_reg was removed.  [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0_M00_AXI.vhd:753]
+WARNING: [Synth 8-6014] Unused sequential element power_up_stat_wdata_reg was removed.  [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0_M00_AXI.vhd:754]
+WARNING: [Synth 8-6014] Unused sequential element can_send_state_reg was removed.  [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0_M00_AXI.vhd:1082]
+WARNING: [Synth 8-6014] Unused sequential element can_msg_pending_reg was removed.  [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0_M00_AXI.vhd:1083]
+WARNING: [Synth 8-6014] Unused sequential element status_reg_val_reg was removed.  [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0_M00_AXI.vhd:1094]
+WARNING: [Synth 8-3848] Net main_freq_test_probe in module/entity Gateway_Logik_v1_0_M00_AXI does not have driver. [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0_M00_AXI.vhd:33]
+WARNING: [Synth 8-3848] Net can_freq_test_probe in module/entity Gateway_Logik_v1_0_M00_AXI does not have driver. [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0_M00_AXI.vhd:34]
+WARNING: [Synth 8-3848] Net interrupt_enabled_led in module/entity Gateway_Logik_v1_0_M00_AXI does not have driver. [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0_M00_AXI.vhd:41]
+WARNING: [Synth 8-6014] Unused sequential element first_run_reg was removed.  [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0_M01_AXI.vhd:584]
+WARNING: [Synth 8-6014] Unused sequential element can_config_status_reg was removed.  [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0_M01_AXI.vhd:719]
+WARNING: [Synth 8-6014] Unused sequential element power_up_stat_awaddr_reg was removed.  [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0_M01_AXI.vhd:721]
+WARNING: [Synth 8-6014] Unused sequential element power_up_stat_wdata_reg was removed.  [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0_M01_AXI.vhd:722]
+WARNING: [Synth 8-6014] Unused sequential element can_send_state_reg was removed.  [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0_M01_AXI.vhd:992]
+WARNING: [Synth 8-6014] Unused sequential element can_msg_pending_reg was removed.  [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0_M01_AXI.vhd:993]
+WARNING: [Synth 8-6014] Unused sequential element status_reg_val_reg was removed.  [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0_M01_AXI.vhd:1004]
+WARNING: [Synth 8-3848] Net SEND_TO_CAN0_CANID in module/entity Gateway_Logik_v1_0_M02_AXI does not have driver. [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0_M02_AXI.vhd:36]
+WARNING: [Synth 8-3848] Net SEND_TO_CAN0_CANDW1 in module/entity Gateway_Logik_v1_0_M02_AXI does not have driver. [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0_M02_AXI.vhd:37]
+WARNING: [Synth 8-3848] Net SEND_TO_CAN0_CANDW2 in module/entity Gateway_Logik_v1_0_M02_AXI does not have driver. [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0_M02_AXI.vhd:38]
+WARNING: [Synth 8-3848] Net SEND_TO_CAN1_CANID in module/entity Gateway_Logik_v1_0_M02_AXI does not have driver. [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0_M02_AXI.vhd:39]
+WARNING: [Synth 8-3848] Net SEND_TO_CAN1_CANDW1 in module/entity Gateway_Logik_v1_0_M02_AXI does not have driver. [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0_M02_AXI.vhd:40]
+WARNING: [Synth 8-3848] Net SEND_TO_CAN1_CANDW2 in module/entity Gateway_Logik_v1_0_M02_AXI does not have driver. [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/788a/hdl/Gateway_Logik_v1_0_M02_AXI.vhd:41]
 WARNING: [Synth 8-6014] Unused sequential element GEN_NO_RD_CMD_OPT.axi_arready_reg_reg was removed.  [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/f80b/hdl/axi_bram_ctrl_v4_1_rfs.vhd:8429]
 WARNING: [Synth 8-6014] Unused sequential element GEN_NO_RD_CMD_OPT.axi_rvalid_set_r_reg was removed.  [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/f80b/hdl/axi_bram_ctrl_v4_1_rfs.vhd:8430]
 WARNING: [Synth 8-6014] Unused sequential element GEN_NO_RD_CMD_OPT.axi_rlast_set_r_reg was removed.  [/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/ipshared/f80b/hdl/axi_bram_ctrl_v4_1_rfs.vhd:8431]
-WARNING: [Synth 8-7129] Port CAN_POWERUP in module tx_pulse_generator is either unconnected or has no load
 WARNING: [Synth 8-7129] Port prmry_aclk in module cdc_sync__parameterized8 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port prmry_resetn in module cdc_sync__parameterized8 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port prmry_vect_in[1] in module cdc_sync__parameterized8 is either unconnected or has no load
@@ -662,26 +665,27 @@ WARNING: [Synth 8-7129] Port prmry_vect_in[27] in module can_sync_block__paramet
 WARNING: [Synth 8-7129] Port prmry_vect_in[26] in module can_sync_block__parameterized0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port prmry_vect_in[25] in module can_sync_block__parameterized0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port prmry_vect_in[24] in module can_sync_block__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port prmry_vect_in[23] in module can_sync_block__parameterized0 is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 3864.547 ; gain = 503.742 ; free physical = 430965 ; free virtual = 514163
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2855.863; parent = 2672.959; children = 182.937
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 5483.570; parent = 3864.551; children = 1619.020
+Finished RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 3863.887 ; gain = 503.258 ; free physical = 343010 ; free virtual = 496506
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2815.049; parent = 2640.987; children = 174.068
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 5447.871; parent = 3863.891; children = 1583.980
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 3864.547 ; gain = 503.742 ; free physical = 430968 ; free virtual = 514167
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2855.863; parent = 2672.959; children = 182.937
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 5483.570; parent = 3864.551; children = 1619.020
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 3866.855 ; gain = 506.227 ; free physical = 343005 ; free virtual = 496502
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2815.049; parent = 2640.987; children = 174.068
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 5450.840; parent = 3866.859; children = 1583.980
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 3864.547 ; gain = 503.742 ; free physical = 430968 ; free virtual = 514167
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2855.863; parent = 2672.959; children = 182.937
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 5483.570; parent = 3864.551; children = 1619.020
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 3866.855 ; gain = 506.227 ; free physical = 343005 ; free virtual = 496501
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2815.049; parent = 2640.987; children = 174.068
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 5450.840; parent = 3866.859; children = 1583.980
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.09 . Memory (MB): peak = 3875.516 ; gain = 0.000 ; free physical = 430982 ; free virtual = 514180
+Netlist sorting complete. Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.09 . Memory (MB): peak = 3877.824 ; gain = 0.000 ; free physical = 342986 ; free virtual = 496483
 INFO: [Netlist 29-17] Analyzing 357 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -717,7 +721,7 @@ Resolution: To avoid this warning, move constraints listed in [.Xil/can_test_pro
 INFO: [Project 1-1714] 4 XPM XDC files have been applied to the design.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3976.348 ; gain = 0.000 ; free physical = 430921 ; free virtual = 514119
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3977.656 ; gain = 0.000 ; free physical = 342895 ; free virtual = 496400
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 356 instances were transformed.
   BUFG => BUFGCE: 2 instances
@@ -725,13 +729,13 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instance 
   SRL16 => SRL16E: 1 instance 
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.1 ; elapsed = 00:00:00.06 . Memory (MB): peak = 3976.348 ; gain = 0.000 ; free physical = 430921 ; free virtual = 514119
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.06 . Memory (MB): peak = 3977.656 ; gain = 0.000 ; free physical = 342894 ; free virtual = 496400
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/tools/xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 3976.348 ; gain = 615.543 ; free physical = 431042 ; free virtual = 514241
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2855.863; parent = 2672.959; children = 182.937
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 5563.355; parent = 3944.336; children = 1619.020
+Finished Constraint Validation : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 3977.656 ; gain = 617.027 ; free physical = 343095 ; free virtual = 496606
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2815.049; parent = 2640.987; children = 174.068
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 5529.625; parent = 3945.645; children = 1583.980
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -739,9 +743,9 @@ Start Loading Part and Timing Information
 Loading part: xczu9eg-ffvb1156-2-e
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 3976.348 ; gain = 615.543 ; free physical = 431042 ; free virtual = 514241
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2855.863; parent = 2672.959; children = 182.937
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 5563.355; parent = 3944.336; children = 1619.020
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 3977.656 ; gain = 617.027 ; free physical = 343091 ; free virtual = 496601
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2815.049; parent = 2640.987; children = 174.068
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 5529.625; parent = 3945.645; children = 1583.980
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -753,7 +757,6 @@ Applied set_property KEEP_HIERARCHY = SOFT for can_1/U0. (constraint file  /home
 Applied set_property KEEP_HIERARCHY = SOFT for can_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for proc_sys_reset_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for input_register_can_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for tx_pulse_generator_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for frequency_test_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for clk_wiz_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for can_1. (constraint file  auto generated constraint).
@@ -763,6 +766,7 @@ Applied set_property KEEP_HIERARCHY = SOFT for input_register_can_1. (constraint
 Applied set_property KEEP_HIERARCHY = SOFT for axi_mem_intercon. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for Gateway_Logik_0_axi_periph. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for Gateway_Logik_0_axi_periph_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for tx_pulse_generator_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for Gateway_Logik_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for can_0/U0/\core_options.cantop_i /CANCORE_LOGIC_I/ol/memrx. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for can_1/U0/\core_options.cantop_i /CANCORE_LOGIC_I/ol/memrx. (constraint file  auto generated constraint).
@@ -771,9 +775,9 @@ Applied set_property KEEP_HIERARCHY = SOFT for can_1/U0/\core_options.cantop_i /
 Applied set_property KEEP = true for user_si570_sysclk_clk_n. (constraint file  auto generated constraint).
 Applied set_property KEEP = true for user_si570_sysclk_clk_p. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 3976.348 ; gain = 615.543 ; free physical = 431043 ; free virtual = 514241
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2855.863; parent = 2672.959; children = 182.937
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 5563.355; parent = 3944.336; children = 1619.020
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 3977.656 ; gain = 617.027 ; free physical = 343091 ; free virtual = 496602
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2815.049; parent = 2640.987; children = 174.068
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 5529.625; parent = 3945.645; children = 1583.980
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'mst_exec_state_reg' in module 'Gateway_Logik_v1_0_M00_AXI'
 INFO: [Synth 8-802] inferred FSM for state register 'mst_exec_state_reg' in module 'Gateway_Logik_v1_0_M01_AXI'
@@ -849,9 +853,9 @@ INFO: [Synth 8-3971] The signal "xpm_memory_base:/gen_wr_b.gen_word_narrow.mem_r
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'CAN_TL_BSP'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 3976.348 ; gain = 615.543 ; free physical = 431035 ; free virtual = 514235
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2855.863; parent = 2672.959; children = 182.937
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 5563.355; parent = 3944.336; children = 1619.020
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 3977.656 ; gain = 617.027 ; free physical = 343074 ; free virtual = 496590
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2815.049; parent = 2640.987; children = 174.068
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 5529.625; parent = 3945.645; children = 1583.980
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -976,26 +980,26 @@ INFO: [Synth 8-3332] Sequential element (CANCORE_LOGIC_I/ol/olsync/ESTAT_2S_CDC_
 INFO: [Synth 8-3332] Sequential element (CANCORE_LOGIC_I/ol/olsync/ESTAT_2S_CDC_TO/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d4[0].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d4) is unused and will be removed from module can_top.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:43 ; elapsed = 00:00:48 . Memory (MB): peak = 3976.348 ; gain = 615.543 ; free physical = 430995 ; free virtual = 514208
-Synthesis current peak Physical Memory [PSS] (MB): peak = 2855.863; parent = 2672.959; children = 182.937
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 5563.355; parent = 3944.336; children = 1619.020
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:44 ; elapsed = 00:00:49 . Memory (MB): peak = 3977.656 ; gain = 617.027 ; free physical = 343052 ; free virtual = 496594
+Synthesis current peak Physical Memory [PSS] (MB): peak = 2815.049; parent = 2640.987; children = 174.068
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 5529.625; parent = 3945.645; children = 1583.980
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-565] redefining clock 'user_si570_sysclk_clk_p'
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:54 ; elapsed = 00:01:02 . Memory (MB): peak = 4216.770 ; gain = 855.965 ; free physical = 430430 ; free virtual = 513642
-Synthesis current peak Physical Memory [PSS] (MB): peak = 3298.902; parent = 3116.467; children = 182.937
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 5835.793; parent = 4216.773; children = 1619.020
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:55 ; elapsed = 00:01:02 . Memory (MB): peak = 4217.078 ; gain = 856.449 ; free physical = 342341 ; free virtual = 495897
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3261.350; parent = 3087.674; children = 174.068
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 5801.062; parent = 4217.082; children = 1583.980
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:55 ; elapsed = 00:01:03 . Memory (MB): peak = 4254.816 ; gain = 894.012 ; free physical = 430398 ; free virtual = 513611
-Synthesis current peak Physical Memory [PSS] (MB): peak = 3310.367; parent = 3127.932; children = 182.937
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 5873.840; parent = 4254.820; children = 1619.020
+Finished Timing Optimization : Time (s): cpu = 00:00:55 ; elapsed = 00:01:03 . Memory (MB): peak = 4242.109 ; gain = 881.480 ; free physical = 342344 ; free virtual = 495903
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3270.084; parent = 3096.408; children = 174.068
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 5826.094; parent = 4242.113; children = 1583.980
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
@@ -1004,9 +1008,9 @@ INFO: [Synth 8-7052] The timing for the instance can_0/U0/core_options.cantop_i/
 INFO: [Synth 8-7052] The timing for the instance can_0/U0/core_options.cantop_i/CANCORE_LOGIC_I/ol/memrx/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance can_1/U0/core_options.cantop_i/CANCORE_LOGIC_I/ol/memtx/xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_bram_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:56 ; elapsed = 00:01:04 . Memory (MB): peak = 4262.824 ; gain = 902.020 ; free physical = 430389 ; free virtual = 513602
-Synthesis current peak Physical Memory [PSS] (MB): peak = 3315.516; parent = 3133.080; children = 182.937
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 5881.848; parent = 4262.828; children = 1619.020
+Finished Technology Mapping : Time (s): cpu = 00:00:56 ; elapsed = 00:01:05 . Memory (MB): peak = 4261.148 ; gain = 900.520 ; free physical = 342322 ; free virtual = 495882
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3273.107; parent = 3099.438; children = 174.068
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 5845.133; parent = 4261.152; children = 1583.980
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -1084,49 +1088,49 @@ WARNING: [Synth 8-3295] tying undriven pin CANCORE_LOGIC_I/tl/tlsync/IC_REG_MSR_
 WARNING: [Synth 8-3295] tying undriven pin CANCORE_LOGIC_I/tl/tlsync/IC_REG_MSR_LBACK_FS1_inferred:in0 to constant 0
 WARNING: [Synth 8-3295] tying undriven pin CANCORE_LOGIC_I/tl/tlom/EMU_WR_ACK_FS1_inferred:in0 to constant 0
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:59 ; elapsed = 00:01:08 . Memory (MB): peak = 4262.824 ; gain = 902.020 ; free physical = 430391 ; free virtual = 513603
-Synthesis current peak Physical Memory [PSS] (MB): peak = 3315.997; parent = 3133.562; children = 182.937
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 5881.848; parent = 4262.828; children = 1619.020
+Finished IO Insertion : Time (s): cpu = 00:01:00 ; elapsed = 00:01:08 . Memory (MB): peak = 4261.148 ; gain = 900.520 ; free physical = 342373 ; free virtual = 495935
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3273.553; parent = 3099.883; children = 174.068
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 5845.133; parent = 4261.152; children = 1583.980
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:59 ; elapsed = 00:01:08 . Memory (MB): peak = 4262.824 ; gain = 902.020 ; free physical = 430391 ; free virtual = 513603
-Synthesis current peak Physical Memory [PSS] (MB): peak = 3315.997; parent = 3133.562; children = 182.937
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 5881.848; parent = 4262.828; children = 1619.020
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:00 ; elapsed = 00:01:08 . Memory (MB): peak = 4261.148 ; gain = 900.520 ; free physical = 342373 ; free virtual = 495935
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3273.553; parent = 3099.883; children = 174.068
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 5845.133; parent = 4261.152; children = 1583.980
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:59 ; elapsed = 00:01:08 . Memory (MB): peak = 4262.824 ; gain = 902.020 ; free physical = 430391 ; free virtual = 513604
-Synthesis current peak Physical Memory [PSS] (MB): peak = 3316.201; parent = 3133.766; children = 182.937
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 5881.848; parent = 4262.828; children = 1619.020
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:00 ; elapsed = 00:01:09 . Memory (MB): peak = 4261.148 ; gain = 900.520 ; free physical = 342374 ; free virtual = 495936
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3273.768; parent = 3100.098; children = 174.068
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 5845.133; parent = 4261.152; children = 1583.980
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:59 ; elapsed = 00:01:09 . Memory (MB): peak = 4262.824 ; gain = 902.020 ; free physical = 430356 ; free virtual = 513569
-Synthesis current peak Physical Memory [PSS] (MB): peak = 3316.201; parent = 3133.766; children = 182.937
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 5881.848; parent = 4262.828; children = 1619.020
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:00 ; elapsed = 00:01:09 . Memory (MB): peak = 4261.148 ; gain = 900.520 ; free physical = 342374 ; free virtual = 495936
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3273.830; parent = 3100.160; children = 174.068
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 5845.133; parent = 4261.152; children = 1583.980
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:00 ; elapsed = 00:01:09 . Memory (MB): peak = 4262.824 ; gain = 902.020 ; free physical = 430382 ; free virtual = 513594
-Synthesis current peak Physical Memory [PSS] (MB): peak = 3316.201; parent = 3133.766; children = 182.937
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 5881.848; parent = 4262.828; children = 1619.020
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:00 ; elapsed = 00:01:09 . Memory (MB): peak = 4261.148 ; gain = 900.520 ; free physical = 342375 ; free virtual = 495938
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3273.830; parent = 3100.160; children = 174.068
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 5845.133; parent = 4261.152; children = 1583.980
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:00 ; elapsed = 00:01:09 . Memory (MB): peak = 4262.824 ; gain = 902.020 ; free physical = 430382 ; free virtual = 513594
-Synthesis current peak Physical Memory [PSS] (MB): peak = 3316.201; parent = 3133.766; children = 182.937
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 5881.848; parent = 4262.828; children = 1619.020
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:00 ; elapsed = 00:01:09 . Memory (MB): peak = 4261.148 ; gain = 900.520 ; free physical = 342375 ; free virtual = 495938
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3273.830; parent = 3100.160; children = 174.068
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 5845.133; parent = 4261.152; children = 1583.980
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1144,18 +1148,18 @@ Report Cell Usage:
 +------+-----------+------+
 |1     |BUFG       |     2|
 |2     |CARRY8     |     4|
-|3     |LUT1       |    88|
-|4     |LUT2       |   177|
-|5     |LUT3       |   218|
-|6     |LUT4       |   209|
-|7     |LUT5       |   295|
-|8     |LUT6       |   660|
+|3     |LUT1       |    90|
+|4     |LUT2       |   180|
+|5     |LUT3       |   226|
+|6     |LUT4       |   207|
+|7     |LUT5       |   290|
+|8     |LUT6       |   667|
 |9     |MMCME4_ADV |     1|
 |10    |MUXF7      |    18|
 |11    |RAMB18E2   |     1|
 |12    |RAMB36E2   |     2|
 |13    |SRL16      |     1|
-|14    |FDCE       |   353|
+|14    |FDCE       |   557|
 |15    |FDPE       |    13|
 |16    |FDR        |   141|
 |17    |FDRE       |   904|
@@ -1163,21 +1167,21 @@ Report Cell Usage:
 |19    |IBUFDS     |     1|
 +------+-----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:00 ; elapsed = 00:01:09 . Memory (MB): peak = 4262.824 ; gain = 902.020 ; free physical = 430382 ; free virtual = 513594
-Synthesis current peak Physical Memory [PSS] (MB): peak = 3316.201; parent = 3133.766; children = 182.937
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 5881.848; parent = 4262.828; children = 1619.020
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:00 ; elapsed = 00:01:09 . Memory (MB): peak = 4261.148 ; gain = 900.520 ; free physical = 342374 ; free virtual = 495936
+Synthesis current peak Physical Memory [PSS] (MB): peak = 3273.830; parent = 3100.160; children = 174.068
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 5845.133; parent = 4261.152; children = 1583.980
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 408 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:51 ; elapsed = 00:01:01 . Memory (MB): peak = 4262.824 ; gain = 790.219 ; free physical = 430413 ; free virtual = 513626
-Synthesis Optimization Complete : Time (s): cpu = 00:01:00 ; elapsed = 00:01:09 . Memory (MB): peak = 4262.832 ; gain = 902.020 ; free physical = 430413 ; free virtual = 513626
+Synthesis finished with 0 errors, 0 critical warnings and 407 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:52 ; elapsed = 00:01:01 . Memory (MB): peak = 4261.148 ; gain = 789.719 ; free physical = 342382 ; free virtual = 495945
+Synthesis Optimization Complete : Time (s): cpu = 00:01:00 ; elapsed = 00:01:09 . Memory (MB): peak = 4261.156 ; gain = 900.520 ; free physical = 342382 ; free virtual = 495945
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 4262.832 ; gain = 0.000 ; free physical = 430538 ; free virtual = 513750
+Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 4261.156 ; gain = 0.000 ; free physical = 342515 ; free virtual = 496079
 INFO: [Netlist 29-17] Analyzing 168 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Opt 31-326] The CLKFBOUT to CLKFBIN net for instance clk_wiz_0/inst/mmcme4_adv_inst with COMPENSATION=INTERNAL is optimized away to aid design routability
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4321.555 ; gain = 0.000 ; free physical = 430454 ; free virtual = 513666
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 4316.879 ; gain = 0.000 ; free physical = 342461 ; free virtual = 496026
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 145 instances were transformed.
   BUFG => BUFGCE: 2 instances
@@ -1185,12 +1189,12 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   IBUFDS => IBUFDS (DIFFINBUF, IBUFCTRL): 1 instance 
   SRL16 => SRL16E: 1 instance 
 
-Synth Design complete, checksum: eb7dc67b
+Synth Design complete, checksum: 7984b8e7
 INFO: [Common 17-83] Releasing license: Synthesis
-378 Infos, 218 Warnings, 0 Critical Warnings and 0 Errors encountered.
+382 Infos, 218 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:09 ; elapsed = 00:01:18 . Memory (MB): peak = 4321.555 ; gain = 1712.512 ; free physical = 430593 ; free virtual = 513805
-INFO: [Coretcl 2-1174] Renamed 88 cell refs.
+synth_design: Time (s): cpu = 00:01:10 ; elapsed = 00:01:18 . Memory (MB): peak = 4316.879 ; gain = 1707.445 ; free physical = 342573 ; free virtual = 496138
+INFO: [Coretcl 2-1174] Renamed 90 cell refs.
 INFO: [Common 17-1381] The checkpoint '/home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.runs/can_test_synth_1/can_test.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file can_test_utilization_synth.rpt -pb can_test_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Aug 18 00:25:01 2025...
+INFO: [Common 17-206] Exiting Vivado at Mon Aug 18 20:55:23 2025...

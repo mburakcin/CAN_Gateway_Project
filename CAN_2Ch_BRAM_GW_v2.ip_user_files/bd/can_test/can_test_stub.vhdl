@@ -1,7 +1,7 @@
 -- Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
--- Date        : Mon Aug 18 00:25:00 2025
+-- Date        : Mon Aug 18 20:55:22 2025
 -- Host        : work5.itiv.kit.edu running 64-bit Rocky Linux 9.6 (Blue Onyx)
 -- Command     : write_vhdl -force -mode synth_stub
 --               /home/upkmy/CAN_2Ch_BRAM_GW_v2/CAN_2Ch_BRAM_GW_v2.gen/sources_1/bd/can_test/can_test_stub.vhdl

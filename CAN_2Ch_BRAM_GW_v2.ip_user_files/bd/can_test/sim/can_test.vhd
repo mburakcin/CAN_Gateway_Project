@@ -1,7 +1,7 @@
 --Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2022.2.2 (lin64) Build 3788238 Tue Feb 21 19:59:23 MST 2023
---Date        : Mon Aug 18 00:23:06 2025
+--Date        : Mon Aug 18 20:53:29 2025
 --Host        : work5.itiv.kit.edu running 64-bit Rocky Linux 9.6 (Blue Onyx)
 --Command     : generate_target can_test.bd
 --Design      : can_test
@@ -922,13 +922,6 @@ architecture STRUCTURE of can_test is
     can_rx_sync : out STD_LOGIC
   );
   end component can_test_input_register_can_0_0;
-  component can_test_tx_pulse_generator_0_0 is
-  port (
-    AXI_CLK : in STD_LOGIC;
-    CAN_POWERUP : in STD_LOGIC;
-    TX_PULSE : out STD_LOGIC
-  );
-  end component can_test_tx_pulse_generator_0_0;
   component can_test_frequency_test_0_0 is
   port (
     main_freq_in : in STD_LOGIC;
@@ -1023,6 +1016,13 @@ architecture STRUCTURE of can_test is
     can_rx_sync : out STD_LOGIC
   );
   end component can_test_input_register_can_1_0;
+  component can_test_tx_pulse_generator_0_0 is
+  port (
+    AXI_CLK : in STD_LOGIC;
+    CAN_POWERUP : in STD_LOGIC;
+    TX_PULSE : out STD_LOGIC
+  );
+  end component can_test_tx_pulse_generator_0_0;
   component can_test_Gateway_Logik_0_0 is
   port (
     GPIO_LED_0 : out STD_LOGIC;

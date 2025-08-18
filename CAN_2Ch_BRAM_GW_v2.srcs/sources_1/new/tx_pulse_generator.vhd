@@ -48,7 +48,7 @@ begin
                         timer <= timer + 1;
                     end if;
                 else              
-                    if timer >=c_clkfreq -1  then
+                    if timer >= (c_clkfreq/500_000)  then
                         timer <= 0;
                         TX_PULSE <= '0';
                     elsif timer = 0 then

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xczu9eg-ffvb1156-2-e" LaunchTime="1755469422">
+<GenRun Id="impl_1" LaunchPart="xczu9eg-ffvb1156-2-e" LaunchTime="1755543249">
   <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
   <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-RQS" Name="can_test_wrapper_postroute_physopted.rqs"/>
@@ -89,18 +89,18 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/tx_pulse_generator.vhd">
-      <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../CANonPL_3/CANonPL_3.srcs/sources_1/new/tx_pulse_generator.vhd"/>
-        <Attr Name="ImportTime" Val="1751916802"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/new/frequency_test.vhd">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../CANonPL_3/CANonPL_3.srcs/sources_1/new/frequency_test.vhd"/>
         <Attr Name="ImportTime" Val="1753684323"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/tx_pulse_generator.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../CANonPL_3/CANonPL_3.srcs/sources_1/new/tx_pulse_generator.vhd"/>
+        <Attr Name="ImportTime" Val="1751916802"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
